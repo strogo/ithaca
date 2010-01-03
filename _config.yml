@@ -1,0 +1,7 @@
+markdown: rdiscount
+pygments: false
+name: "ithaca"
+subtitle: "a digital home"
+permalink: /ithaca/:year/:month/:day/:title.html
+exclude:
+  - Rakefile
