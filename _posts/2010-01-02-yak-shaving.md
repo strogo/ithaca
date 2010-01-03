@@ -63,7 +63,7 @@ In the process of writing this up, I went looking in Eric Raymond's [Jargon file
 
 ## What next?
 
-Well, you know, baby steps and all that. Soon enough I hope to write the About page and add some CSS. At that point, I will have to decide whether to leave this page unstyled - it's kind of the point, really - or to link the style to this page as well. That will be one of those good problems to have. I should also write more posts. Lots to do. And I still need to learn more about HTTP. I hear that [HTTP Bis][httpbis] is coming...
+Well, you know, baby steps and all that. Soon enough I hope to write the About page and add some CSS. At that point, I will have to decide whether to leave this page unstyled - it's kind of the point, really - or to link the style to this page as well. That will be one of those good problems to have. I should also write more posts. Lots to do. And I still need to learn more about HTTP. I hear that [HTTP-bis][httpbis] is coming...
 
 [zed]: http://www.cio.com/article/191000/
 [jargon]: http://catb.org/jargon/html/index.html
