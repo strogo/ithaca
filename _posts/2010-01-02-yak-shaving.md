@@ -2,7 +2,7 @@
 layout: post
 title: Yak shaving
 location: New York, NY
-h1: Yak shaving, or Why does this website have no style?
+h1: Yak shaving, or Why <del>does</del> <ins>did</ins> this website have no style?
 ---
 
 ## Huh?
@@ -68,3 +68,7 @@ Well, you know, baby steps and all that. Soon enough I hope to write the About p
 [zed]: http://www.cio.com/article/191000/
 [jargon]: http://catb.org/jargon/html/index.html
 [httpbis]: http://www.ietf.org/dyn/wg/charter/httpbis-charter.html
+
+## Some time later...
+
+So, I finally have some CSS and I've decided _not_ to leave this page in the browser default state. It's just too ugly. I guess that makes this post either ironic or pointless or odd or all of the above. Such is life.
