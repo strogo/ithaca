@@ -1,0 +1,72 @@
+body {
+	margin: 0 auto 40px;
+	width: 760px;
+	
+	/* 	62.5 x 16px (browser default) = 10px.
+		So this allows 1.4em => 14px later. */
+	font-size: 62.5%;
+	font-family: "lemonde-courrier-1", "lemonde-courrier-2", serif;
+	color: #1F1F1F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "deva-ideal-1", "deva-ideal-2", sans;
+	font-weight: bold;
+	line-height: 1.6;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	color: #3D3D3D;
+}
+
+#title h1 { 
+	margin-top: 0; 
+	font-size: 3em;
+}
+
+#title a:link, #title a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+#title a:hover {
+	color: #3D3D3D;
+	text-decoration: underline;
+	background: #B8B8B8;
+}
+
+h1 { font-size: 2.6em; }
+
+h2 { font-size: 2em; border-bottom: solid 4px; }
+h3 { font-size: 1.8em; }
+
+p {
+	font-size: 1.6em;
+	line-height: 1.4;
+	margin: 12px auto;
+
+}
+
+blockquote { margin: 10px 30px 10px 40px; }
+
+ul, ol { margin-left: 40px; font-size: 1.6em; }
+
+ul ul, ol ol { font-size: 100%; }
+
+h2 + p { margin-top: 25px; }
+
+a:link, a:visited {
+	color: #7A7A7A;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #3D3D3D;
+	text-decoration: none;
+	background: #B8B8B8;
+}
+
+#stamp {
+	color: #B8B8B8;
+	font-size: 1em;
+	margin-top: -15px;
+}
