@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>ithaca</title>
- <link href="http://arpinum.org/ithaca/atom.xml" rel="self"/>
- <link href="http://arpinum.org/ithaca/"/>
+ <link href="http://ithaca.arpinum.org/atom.xml" rel="self"/>
+ <link href="http://ithaca.arpinum.org/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://arpinum.org/ithaca/</id>
+ <id>http://ithaca.arpinum.org/</id>
  <author>
    <name>Telemachus Odysseos</name>
    <email>telemachus@arpinum.org</email>
@@ -19,7 +19,7 @@ layout: nil
    <title>{{ post.title }}</title>
    <link href="{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://arpinum.org/ithaca{{ post.id }}</id>
+   <id>http://arpinum.org{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

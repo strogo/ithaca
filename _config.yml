@@ -4,3 +4,6 @@ name: "ithaca"
 permalink: /:year/:month/:day/:title.html
 exclude:
   - Rakefile
+  - ithaca.tmproj
+auto: true
+server: true
