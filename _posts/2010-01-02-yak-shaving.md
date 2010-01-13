@@ -31,9 +31,9 @@ Here's an abbreviated list (with sub-lists, naturally) of things I did first.
 	+ HTML5 or HTML4?
 	+ I should really learn more about HTML...
 		+ Microformats?
-			+ This whole semantic markup thing sounds cool. Let's read more about that.
-				+ Do I really understand REST? 
-					+ I really need to know more about HTTP...
+		+ This whole semantic markup thing sounds cool. Let's read more about that.
+		+ Do I really understand REST? 
+			+ I really need to know more about HTTP...
 + Should it have a feed?
 	+ RSS?
 	+ Atom?
