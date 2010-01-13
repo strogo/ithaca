@@ -7,7 +7,7 @@ h1: Yak shaving, or Why does this website have no style?
 
 ## Huh?
 
-Let's start a little bit back from the central idea. I'm good at wasting time. I'm really good at it. I'm all-city, all-pro, all-American. I'm world class. I really wanted this website to have a great CSS-based look. I just haven't done it because of all the time-wasting. Having said that, it's still important to explain a bit more about *how* and *why* I waste time so well. Let's do that, shall we?
+Let's start a little bit back from the central idea. I'm good at wasting time. I'm really good at it. I'm all-city, all-pro, all-American. I'm world class. I really wanted this website to have a little style. (I'm no designer, but _something_ at least.) I just haven't done it because of all the time-wasting. Having said that, it's still important to explain a bit more about *how* and *why* I waste time so well. Let's do that, shall we?
 
 I don't have a lot to say about *why*, so I 'll do that first. I've thought about it a lot - it's a good way to waste time, after all - but I don't really understand why I have this tendency. I can say that it has something to do with a fear of not knowing enough. If I use Ruby, but Ruby's interpreter is written in C, do I need to know C? Part of me answers "No" for all sorts of good, sane reasons, but it nags me. I have this lingering guilt and shame that I don't *really* know Ruby, since I don't understand the language that its interpreter is written in. I know this is irrational (and just plain false), but again, it eats at me anyhow. In the case of making a website, there are endless things I might want or need to know more about, so this itch offers a lot of potential pain.
 
@@ -55,11 +55,11 @@ So, that's why this page has no style. After a *long*, *long* time I had accompl
 
 ## What was that about a yak?
 
-Here's <cite>[Zed Shaw on yak shaving][zed]</cite>:
+I thought I knew what 'yak shaving' meant, but it turned out I didn't. Here's <cite>[Zed Shaw on yak shaving][zed]</cite>:
 
 > "Yak shaving" is a programmer's slang term for the distance between a task's start and completion and the tangential tasks between you and the solution. If you ever wanted to mail a letter, but couldn't find a stamp, and had to drive your car to get the stamp, but also needed to refill the tank with gas, which then let you get to the post office where you could buy a stamp to mail your letter—then you've done some yak shaving.
 
-In the process of writing this up, I went looking in Eric Raymond's [Jargon file][jargon] and elsewhere for definitions and quotations about yak shaving. I had always thought that it meant the unnecessary, neurotic activity where you spin in ever widening circles *away* from your goal, but apparently not. I use the word with this negative connotation, but the strict meaning appears to be neutral - or negative but in a different way. In Zed Shaw's example, you actually do need to fill the tank, to go to the post office, to buy the stamps, to finally mail the letter. This is a pain, but it's real work. It turns out that I've been using the phrase wrong all this time. When I figured this all out, my first thought was that I should retitle and rewrite this post. I didn't, for obvious reasons. After all, the first step may be admitting I have a problem, but for me the most important step is the rake task that will *post this damn page*.
+While I was writing this up, I went looking in Eric Raymond's [Jargon file][jargon] and elsewhere for definitions and quotations about yak shaving. I had always thought that it meant the unnecessary, neurotic activity where you spin in ever widening circles *away* from your goal, but apparently not. I use the word with this negative connotation, but the strict meaning appears to be neutral - or negative but in a different way. In Zed Shaw's example, you actually do need to fill the tank, to go to the post office, to buy the stamps, to finally mail the letter. This is a pain, but it's real work. It turns out that I've been using the phrase wrong all this time. When I figured this all out, my first thought was that I should retitle and rewrite this post. I didn't, for obvious reasons. After all, the first step may be admitting I have a problem, but for me the most important step is the rake task that will *post this damn page*.
 
 ## What next?
 
