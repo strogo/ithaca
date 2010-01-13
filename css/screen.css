@@ -48,9 +48,17 @@ p {
 
 blockquote { margin: 10px 30px 10px 40px; }
 
-ul, ol { margin-left: 40px; font-size: 1.6em; }
+ul, ol { margin-left: 40px; font-size: 1.6em; line-height: 1.2; }
 
 ul ul, ol ol { font-size: 100%; }
+
+ul { list-style-type: square; }
+
+ul ul { list-style-type: circle;}
+
+ul ul ul { list-style-type: disc; }
+
+ul ul ul ul { list-style-type: square; }
 
 h2 + p { margin-top: 25px; }
 
