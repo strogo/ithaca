@@ -8,7 +8,7 @@ title: home
   <ul>
     {% for post in site.posts %}
 	<li>
-		<span>{{ post.date | date: "%Y-%m-%d" }} &gt;&gt; </span>
+		<span>{{ post.date | date: "%Y-%m-%d" }} &middot; </span>
 		<a href="/ithaca{{ post.url }}">{{ post.title }}</a>
 	</li>
     {% endfor %}
