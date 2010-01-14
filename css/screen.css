@@ -1,6 +1,6 @@
 body {
 	margin: 0 auto 40px;
-	width: 760px;
+	width: 700px;
 	
 	/* 	62.5 x 16px (browser default) = 10px.
 		So this allows 1.4em => 14px later. */
@@ -42,7 +42,7 @@ h2 { font-size: 2em; border-bottom: solid 4px; }
 h3 { font-size: 1.8em; }
 
 p {
-	font-size: 1.6em;
+	font-size: 1.4em;
 	line-height: 1.4;
 	margin: 12px auto;
 
@@ -50,7 +50,7 @@ p {
 
 blockquote { margin: 10px 30px 10px 40px; }
 
-ul, ol { margin-left: 40px; font-size: 1.6em; line-height: 1.2; }
+ul, ol { margin-left: 40px; font-size: 1.4em; line-height: 1.2; }
 
 ul ul, ol ol { font-size: 100%; }
 
