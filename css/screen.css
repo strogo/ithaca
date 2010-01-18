@@ -25,6 +25,14 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px;
 }
 
+#title h1 a {
+	display: block;
+	text-align: center;
+	width: 5em;
+	height: 1.25em;
+	line-height: 1.25em;
+}
+
 #title a:link, #title a:visited {
 	color: white;
 	text-decoration: none;
