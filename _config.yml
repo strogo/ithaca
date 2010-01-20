@@ -1,9 +1,8 @@
 markdown: rdiscount
 pygments: false
-name: "ithaca"
+name: "Ithaca"
 permalink: /:year/:month/:day/:title.html
 exclude:
   - Rakefile
-  - ithaca.tmproj
 auto: false
 server: false
