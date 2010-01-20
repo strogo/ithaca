@@ -18,27 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 	color: #3D3D3D;
 }
 
-#title h1 { 
-	margin-top: 0; 
+h1#title { 
+	margin: 0 0 10px 0; 
 	font-size: 3em;
-	background: black;
-	padding: 10px;
 }
 
-#title h1 a {
-	display: block;
-	text-align: center;
-	width: 5em;
-	height: 1.25em;
-	line-height: 1.25em;
-}
-
-#title a:link, #title a:visited {
-	color: white;
+h1#title a:link, h1#title a:visited {
+	color: red;
 	text-decoration: none;
 }
 
-#title a:hover {
+h1#title a:hover {
 	color: black;
 	text-decoration: underline;
 	background: #B8B8B8;

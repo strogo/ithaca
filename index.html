@@ -1,16 +1,15 @@
 ---
 layout: default
-title: home
+title: Ithaca
 ---
 
-<div id="home">
-  <h2>posts</h2>
-  <ul>
-    {% for post in site.posts %}
+<h1 id="title"><a href="/">{{ page.title }}</a></h1>
+
+<ul>
+{% for post in site.posts %}
 	<li>
 		<span>{{ post.date | date: "%Y-%m-%d" }} &middot; </span>
 		<a href="{{ post.url }}">{{ post.title }}</a>
 	</li>
-    {% endfor %}
-  </ul>
-</div>
+{% endfor %}
+</ul>

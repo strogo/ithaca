@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div id="post">
-	<h1>{{ page.h1 }}</h1>
+&lArr; <a href="/">return home</a>
 
-	<div id="stamp">
-		{{ page.location }} &middot; {{ page.date | date: "%Y-%m-%d" }}
-	</div>
+<h1>{{ page.h1 }}</h1>
 
-	{{ content }}
+<div id="stamp">
+	{{ page.location }} &middot; {{ page.date | date: "%Y-%m-%d" }}
 </div>
+
+{{ content }}
