@@ -1,15 +1,18 @@
 ---
 layout: default
-title: Ithaca
+title: Home
 ---
 
-<h1 id="title"><a href="/">{{ page.title }}</a></h1>
-
-<ul>
-{% for post in site.posts %}
-	<li>
-		<span>{{ post.date | date: "%Y-%m-%d" }} &middot; </span>
-		<a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-{% endfor %}
+<h1 id="title">{{ site.name }}</h1>
+<p>Just a place for me to put my random thoughts...</p>
+<ul id="nav">
+	<li><a href="/about.html">About</a></li>
+	<li>| <a href="/atom.xml">Subscribe</a></li>
 </ul>
+
+{% for post in site.posts limit:5 %}
+	<ul id="archive">
+		<li>{{ post.date | date: "%Y-%m-%d" }} &middot; 
+		<a href="{{ post.url }}">{{ post.title }}</a></li>
+	</ul>
+{% endfor %}
