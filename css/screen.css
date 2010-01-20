@@ -6,7 +6,8 @@ body {
 		So this allows 1.4em => 14px later. */
 	font-size: 62.5%;
 	font-family: "lemonde-courrier-1", "lemonde-courrier-2", serif;
-	color: #1F1F1F;
+	color: #434345;
+	background: #EDEDED;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,28 +16,61 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.6;
 	margin-top: 20px;
 	margin-bottom: 5px;
-	color: #3D3D3D;
+	color: #232324;
 }
 
 h1#title { 
 	margin: 0 0 10px 0; 
-	font-size: 3em;
+	font-size: 2.8em;
 }
 
 h1#title a:link, h1#title a:visited {
-	color: red;
+	color: #000000;
 	text-decoration: none;
 }
 
 h1#title a:hover {
-	color: black;
+	color: #232324;
 	text-decoration: underline;
-	background: #B8B8B8;
+	background: #BABABA;
+}
+
+h1#title + p {
+	margin-top: -15px;
+	font-size: 2em;
+	margin-bottom: 10px;
+	border-bottom: solid 4px;
+}
+
+ul#nav {
+	list-style-type: none;
+	margin: 0 0 25px 0;
+	padding: 0;
+	font-family: "deva-ideal-1", "deva-ideal-2", sans;
+	font-size: 1.8em;
+}
+
+ul#nav li {
+	display: inline;
+	padding-right: 5px;
+}
+
+ul#archive {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1.8em;
+}
+
+#home {
+	margin: 0;
+	padding: 0;
+	font-size: 1.8em;
 }
 
 h1 { font-size: 2.6em; }
 
-h2 { font-size: 2em; border-bottom: solid 4px; }
+h2 { font-size: 2.1em; border-bottom: solid 4px; }
 h3 { font-size: 1.8em; }
 
 p {
@@ -63,14 +97,14 @@ ul ul ul ul { list-style-type: square; }
 h2 + p { margin-top: 25px; }
 
 a:link, a:visited {
-	color: #7A7A7A;
+	color: #232324;
 	text-decoration: underline;
 }
 
 a:hover {
-	color: #3D3D3D;
+	color: #000000;
 	text-decoration: none;
-	background: #B8B8B8;
+	background: #BABABA;
 }
 
 #stamp {
