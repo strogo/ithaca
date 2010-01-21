@@ -52,7 +52,7 @@ ul#nav {
 
 ul#nav li {
 	display: inline;
-	padding-right: 5px;
+	padding-right: 3px;
 }
 
 ul#archive {
@@ -112,3 +112,10 @@ a:hover {
 	font-size: 1em;
 	margin-top: -15px;
 }
+
+#footer {
+	margin-top: 20px;
+	border-top: solid 4px
+}
+
+#footer ul { margin-top: 10px; }
