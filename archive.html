@@ -1,0 +1,27 @@
+---
+layout: default
+title: Archive
+h1: All the posts I saw fit to print
+---
+
+<div id="home">&lArr; <a href="/">Return home</a></div>
+
+<h1>{{ page.h1 }}</h1>
+
+<ul id="arch">
+	{% for post in site.posts %}
+		<li>
+			<span>{{ post.date | date: "%Y-%m-%d" }} &middot; </span>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+  {% endfor %}
+</ul>
+
+<div id="footer">
+	<ul id="nav">
+		<li><a href="/">Home</a></li>
+		<li>| <a href="/about.html">About</a></li>
+		<li id="here">| Archive</li>
+		<li>| <a href="/atom.xml">Subscribe</a></li>
+	</ul>
+</div>
