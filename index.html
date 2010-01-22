@@ -5,11 +5,8 @@ title: Home
 
 <h1 id="title">{{ site.name }}</h1>
 <p>a digital homecoming</p>
-<ul id="nav">
-	<li><a href="/about.html">About</a></li>
-	<li>| <a href="/archive.html">Archives</a></li>
-	<li>| <a href="/atom.xml">Subscribe</a></li>
-</ul>
+
+<h2 id="h_banner">Recent arrivals...</h2>
 
 {% for post in site.posts limit:5 %}
 	<ul id="archive">
@@ -17,3 +14,12 @@ title: Home
 		<a href="{{ post.url }}">{{ post.title }}</a></li>
 	</ul>
 {% endfor %}
+
+<div id="footer">
+	<ul id="nav">
+		<li id="here">Home</a></li>
+		<li>| <a href="/about.html">About</a></li>
+		<li>| <a href="/archive.html">Archive</a></li>
+		<li>| <a href="/atom.xml">Subscribe</a></li>
+	</ul>
+</div>
