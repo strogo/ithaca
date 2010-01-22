@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<div id="home">&lArr; <a href="/">return home</a></div>
+<div id="home">&lArr; <a href="/">Return home</a></div>
 
-<h1>{{ page.h1 }}</h1>
+<h1 id="top">{{ page.h1 }}</h1>
 
 <div id="stamp">
 	{{ page.location }} &middot; {{ page.date | date: "%Y-%m-%d" }}
 </div>
 
 {{ content }}
+
+<p>&uArr; <a id="up" href="#home">Back to top</a></p>
 
 <div id="footer">
 	<ul id="nav">
