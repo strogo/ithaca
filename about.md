@@ -1,7 +1,6 @@
 ---
 layout: about
 title: About
-location: New York, NY
 h1: A little background
 date: 2010-02-26
 ---
@@ -30,7 +29,7 @@ My name is Peter Aronoff, and online I tend to go by Telemachus (hence the name 
 [so]: http://stackoverflow.com/users/26702/telemachus
 [hn]: http://news.ycombinator.com/
 [d]: http://delicious.com/Telemachus_
-[tw]: http://twitter.com/_telemachus
+[tw]: http://twitter.com/peteraronoff
 
 ## What's with the names?
 

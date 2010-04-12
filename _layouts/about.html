@@ -4,15 +4,19 @@ layout: default
 
 <div id="home">&lArr; <a href="/">Return home</a></div>
 
-<h1>{{ page.h1 }}</h1>
+<h1 id="top">{{ page.h1 }}</h1>
+
+<div id="stamp">Last updated: {{ page.date | date: "%Y-%m-%d" }}</div>
 
 {{ content }}
+
+<div id="up">&uArr; <a href="#home">Back to top</a></div>
 
 <div id="footer">
 	<ul id="nav">
 		<li><a href="/">Home</a></li>
-		<li id="here">| About</li>
-		<li id="here">| <a href="/archive.html">Archive</a></li>
+		<li>| About</li>
+		<li>| <a href="/archive.html">Archive</a></li>
 		<li>| <a href="/atom.xml">Subscribe</a></li>
 	</ul>
 </div>
