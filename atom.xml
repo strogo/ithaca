@@ -10,7 +10,7 @@ layout: nil
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://ithaca.arpinum.org/</id>
  <author>
-   <name>Telemachus Odysseos</name>
+   <name>Peter Aronoff</name>
    <email>telemachus@arpinum.org</email>
  </author>
 
