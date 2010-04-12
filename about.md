@@ -3,7 +3,7 @@ layout: about
 title: About
 location: New York, NY
 h1: A little background
-date: 2010-01-21
+date: 2010-02-26
 ---
 
 ## Why?
@@ -23,7 +23,7 @@ Two main reasons: I want to write more, and I want a place to put longer notes t
 
 ## Who?
 
-My online handle is Telemachus (hence the name of this site - partly), and you can reach me at telemachus /at/ arpinum /dot/ org. It shouldn't really matter, but if you're curious, I'm a teacher and sysadmin in New York City. In addition to the occasional post here, I'm online regularly or semi-regularly in some other places. I visit [Debian User Forums][df] and [LinuxQuestions][lq] regularly. I sometimes post questions or answers on [StackOverflow][so], and I sometimes post comments on [Hacker News][hn]. I keep some bookmarks on [Delicious][d], and I've started using [Twitter][tw], though I'm not sure how long that will last frankly. Wherever I hang out regularly, my name will be some variation of Telemachus, but of course not every online Telemachus is me. Consider yourself warned.
+My name is Peter Aronoff, and online I tend to go by Telemachus (hence the name of this site - partly). If you have something you _must_ say to me, you can reach me at telemachus /at/ arpinum /dot/ org. It shouldn't really matter, but if you're curious, I'm a teacher and sysadmin in New York City. In addition to the occasional post here, I'm online regularly or semi-regularly in some other places. I visit [Debian User Forums][df] and [LinuxQuestions][lq] regularly. I sometimes post questions or answers on [StackOverflow][so], and I sometimes post comments on [Hacker News][hn]. I keep some bookmarks on [Delicious][d], and I've started using [Twitter][tw], though I'm not sure how long that will last frankly. Wherever I hang out regularly, my name will be some variation of Telemachus, but of course not every online Telemachus is me. Consider yourself warned.
 
 [df]: http://forums.debian.net/
 [lq]: http://www.linuxquestions.org/questions/ 
