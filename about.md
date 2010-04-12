@@ -2,7 +2,7 @@
 layout: about
 title: About
 h1: A little background
-date: 2010-02-26
+date: 2010-04-12
 ---
 
 ## Why?
