@@ -89,6 +89,10 @@ p {
 
 }
 
+code { font-family: "deva-ideal-1", "deva-ideal-2", sans; }
+
+p code { font-size: 100%; }
+
 blockquote { margin: 10px 30px 10px 40px; }
 
 ul, ol { margin-left: 40px; font-size: 1.4em; line-height: 1.2; }
