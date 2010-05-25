@@ -29,18 +29,18 @@ Finally, reinstall my data and 3rd party apps. This one is pretty self-explanato
 + [AppZapper][appzapper] for cleanup
 + [Theremin][theremin] (backed by [MPD][mpd] via Homebrew) for music
 + [Gruml][gruml] for RSS feeds
-+ [Itsy][itsy] and/or Echofon for Twitter (if Itsy supported lists, it would be Itsy period)
++ [Itsy][itsy] and/or [Echofon][echofon] for Twitter (if Itsy supported lists, it would be Itsy period)
 + [Growl][growl] for notifications
 
 ## Tweaks
 
 Even less fancy, but again, it may be useful sometime to have these collected somewhere.
 
-There's no simple way to change the hideous default login background. Luckily, this works just fine:
+There's no preference to change the hideous default login background. Luckily, this works just fine:
 
 <pre class="textmate-source"><span class="source source_shell">defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture /path/to/picture.png</span></pre>
 
-To manage multiple Ruby and Perl installations (and stay sane), use [rvm][rvm] and [App-perlbrew][perlbrew]. They both work on the same principle: they automate the installation of multiple language interpreters in your $HOME directory, and they make it easy to switch between interpreters. (`rvm` hides things away in `$HOME/.rvm`, and App-perlbrew puts things in `$HOME/perl5`. I prefer the tidiness of using a hidden directory, but it's not a dealbreaker. __Edit__: I didn't read the documentation carefully enough. You can change the default installation location easily. Simply set a different `PERLBREW_ROOT` prior to installation with export: `export PERLBREW_ROOT=/path/to/wherever/perlbrew`.) I'm going to write up a whole post just on these two later, but if you haven't checked them out, you should.
+To manage multiple Ruby and Perl installations (and stay sane), use [rvm][rvm] and [App-perlbrew][perlbrew]. They both work on the same principle: they automate the installation of multiple language interpreters in your `$HOME` directory, and they make it easy to switch between interpreters. (`rvm` hides things away in `$HOME/.rvm`, and App-perlbrew puts things in `$HOME/perl5`. I prefer the tidiness of using a hidden directory, but it's not a dealbreaker. __Edit__: I didn't read the documentation carefully enough. You can change the default installation location easily. Simply set a different `PERLBREW_ROOT` prior to installation with export: `export PERLBREW_ROOT=/path/to/wherever/perlbrew`.) I'm going to write up a whole post just on these two later, but if you haven't checked them out, you should.
 
 If you have a Homebrew-installed Python and you install [Getmail][getmail], the binaries end up lost in `/usr/local/Cellar/python/2.x.x/bin` - far away from your likely `$PATH`. This breaks Mutt - or to be more precise, it means that Mutt can't receive mail. My solution: symlink the four Getmail binaries to `/usr/local/bin`. (There is probably a better fix for this, but I don't care enough about Python installations to bother searching for it.)
 
@@ -49,7 +49,7 @@ ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_fetch /usr/local/bin/getmail_fe
 ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_maildir /usr/local/bin/getmail_maildir
 ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_mbox /usr/local/bin/getmail_mbox</span></pre>
 
-Homebrew will inlocalstall MPD, MPC and Flac just fine, but you will also need to create a `$HOME/.mpdconf`. Most of the file is standard, but the audio output is odd. (Thanks to Evan Hanson for this tip in his post about [MPD on OSX](http://evanhanson.com/2010/03/22/mpd-on-os-x/). I also hide my music files away in a hidden directory `$HOME/.musica`. Both MPD and MPC can find them there just fine, and I don't fiddle with them by hand. For whatever it's worth, here's my basic configuration file:
+Homebrew will install MPD, MPC and Flac just fine, but you will also need to create a `$HOME/.mpdconf`. Most of the file is standard, but the audio output is odd. (Thanks to Evan Hanson for this tip in his post about [MPD on OSX](http://evanhanson.com/2010/03/22/mpd-on-os-x/). I also hide my music files away in a hidden directory `$HOME/.musica`. Both MPD and MPC can find them there just fine, and I don't fiddle with them by hand. For whatever it's worth, here's my basic configuration file:
 
 <pre class="textmate-source"><span class="source source_shell">music_directory     <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.musica<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
 playlist_directory  <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.mpd/playlists<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
@@ -100,6 +100,7 @@ The HTTPD output is not necessary if you don't want to stream music over HTTP. I
 [mpd]: http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki
 [gruml]: http://www.grumlapp.com/
 [itsy]: http://mowglii.com/itsy/
+[echofon]: http://www.echofon.com/
 [growl]: http://growl.info/
 [getmail]: http://pyropus.ca/software/getmail/
 [launchd]: http://mpd.wikia.com/wiki/MPD_on_OSX#LaunchD
