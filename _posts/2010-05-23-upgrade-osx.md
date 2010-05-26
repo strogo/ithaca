@@ -86,6 +86,8 @@ mixer_type          <span class="string string_quoted string_quoted_double strin
 
 The HTTPD output is not necessary if you don't want to stream music over HTTP. I haven't bothered to set up a Launchd item so that MPD launches automatically on boot. I should, but I need to read up first on Launchd. For the moment, I just launch it manually when I want music. (There's a discussion on the MPD wiki [about setting up Launchd][launchd], but it's a bit brief. I want to read more about the whole process first.) 
 
+__Edit__: I forgot about fonts. For monospace fonts, I really like Microsoft's [Consolas][consolas] and Ralph Levien's [Inconsolata][inconsolata]. At the moment, I'm using David Zhou's straight apostrophe version of Inconsolata, [Inconsolata-dz][inconsolata-dz], which is worth looking at if you like Inconsolata itself. In order to get Microsoft's fonts on a Mac without installing Office or whatever, I use a modified version of Aristotole Pagaltzis's [vistafonts-installer][vistafonts] script. (This requires cabextract to work with the fonts, but you can get that from Homebrew. Pagaltzis's script is designed for a Linux environment, but it works well on OSX with only cosmetic changes.)
+
 [fink]: http://www.finkproject.org/
 [macports]: http://www.macports.org/
 [rudix]: http://rudix.org/
@@ -104,3 +106,7 @@ The HTTPD output is not necessary if you don't want to stream music over HTTP. I
 [growl]: http://growl.info/
 [getmail]: http://pyropus.ca/software/getmail/
 [launchd]: http://mpd.wikia.com/wiki/MPD_on_OSX#LaunchD
+[consolas]: http://www.microsoft.com/typography/ClearTypeFonts.mspx
+[inconsolata]: http://www.levien.com/type/myfonts/inconsolata.html
+[inconsolata-dz]: http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/
+[vistafonts]: http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer
