@@ -86,7 +86,9 @@ mixer_type          <span class="string string_quoted string_quoted_double strin
 
 The HTTPD output is not necessary if you don't want to stream music over HTTP. I haven't bothered to set up a Launchd item so that MPD launches automatically on boot. I should, but I need to read up first on Launchd. For the moment, I just launch it manually when I want music. (There's a discussion on the MPD wiki [about setting up Launchd][launchd], but it's a bit brief. I want to read more about the whole process first.) 
 
-__Edit__: I forgot about fonts. For monospace fonts, I really like Microsoft's [Consolas][consolas] and Ralph Levien's [Inconsolata][inconsolata]. At the moment, I'm using David Zhou's straight apostrophe version of Inconsolata, [Inconsolata-dz][inconsolata-dz], which is worth looking at if you like Inconsolata itself. In order to get Microsoft's fonts on a Mac without installing Office or whatever, I use a modified version of Aristotole Pagaltzis's [vistafonts-installer][vistafonts] script. (This requires cabextract to work with the fonts, but you can get that from Homebrew. Pagaltzis's script is designed for a Linux environment, but it works well on OSX with only cosmetic changes.)
+__Edit__: I forgot about fonts. For monospace fonts, I really like Microsoft's [Consolas][consolas] and Ralph Levien's [Inconsolata][inconsolata]. At the moment, I'm using David Zhou's straight apostrophe version of Inconsolata, [Inconsolata-dz][inconsolata-dz], which is worth looking at if you like Inconsolata itself. In order to get Microsoft's fonts on a Mac without installing Office or whatever, I use a modified version of Aristotle Pagaltzis's [vistafonts-installer][vistafonts] script. (This requires cabextract to work with the fonts, but you can get that from Homebrew. Pagaltzis's script is designed for a Linux environment, but it works well on OSX with only cosmetic changes.)
+
+__Edit 2__: Last one, I promise, but I forgot one other annoyance. Out of the box on a Mac, you will discover a number of folders in your `$HOME` directory which you cannot remove. If you try to delete 'Music' or 'Sites' or the like, you get told you can't do that. The message, as I recall, seems designed to make you think removing those folders will break your system - which is bullshit. In a nutshell, Apple uses ACLs to lock these directories down. ([ACLs][aclw] provide permissions for complex scenarios where POSIX permissions give out.) You can remove the ACLs, however, with `chmod -N`. Once you remove this extra layer of permissions, you can do as you like with your `$HOME` directory. (The fullest discussion I could find from Apple on ACLs is in their documentation for [file server administration][acls]. **Warning**: link goes directly to a pdf.)
 
 [fink]: http://www.finkproject.org/
 [macports]: http://www.macports.org/
@@ -110,3 +112,5 @@ __Edit__: I forgot about fonts. For monospace fonts, I really like Microsoft's [
 [inconsolata]: http://www.levien.com/type/myfonts/inconsolata.html
 [inconsolata-dz]: http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/
 [vistafonts]: http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer
+[aclw]: http://en.wikipedia.org/wiki/Access_control_list
+[acls]: http://manuals.info.apple.com/en_US/FileServerAdmin_v10.6.pdf
