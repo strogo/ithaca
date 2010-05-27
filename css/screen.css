@@ -115,12 +115,11 @@ a:link, a:visited {
 }
 
 a:hover, a:focus {
-	color: #c4125c;
+	color: #ba3564;
 	text-decoration: none;
-	background: #BABABA;
 }
 
-a { -webkit-transition: color 500ms linear; }
+a { -webkit-transition: color .6s ease-out; }
 
 #stamp {
 	color: #B8B8B8;
