@@ -120,6 +120,8 @@ a:hover, a:focus {
 	background: #BABABA;
 }
 
+a { -webkit-transition: color 500ms linear; }
+
 #stamp {
 	color: #B8B8B8;
 	font-size: 1em;
