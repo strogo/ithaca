@@ -8,16 +8,18 @@ title: Home
 
 <h2 id="h_banner">Recent arrivals...</h2>
 
-{% for post in site.posts limit:5 %}
 	<ul id="archive">
-		<li>{{ post.date | date: "%Y-%m-%d" }} &middot; 
-		<a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% for post in site.posts limit:5 %}
+      <li>
+      {{ post.date | date: "%Y-%m-%d" }} &middot; 
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
 	</ul>
-{% endfor %}
 
 <div id="footer">
 	<ul id="nav">
-		<li id="here">Home</a></li>
+		<li id="here">Home</li>
 		<li>| <a href="/about.html">About</a></li>
 		<li>| <a href="/archive.html">Archive</a></li>
 		<li>| <a href="/atom.xml">Subscribe</a></li>
