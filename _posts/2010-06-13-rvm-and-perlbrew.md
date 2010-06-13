@@ -25,13 +25,13 @@ Assuming you now agree that you need multiple Perls and Rubies, you may still wo
 
 ## Installing and using RVM
 
-First of all, RVM has excellent documentation on its website. You should read it. That said, here's a short overview of how to install and use RVM.
+First of all, RVM has [excellent documentation][rvm-doc] on its website. You should read it. That said, here's a short overview of how to install and use RVM.
 
 As a regular user, install this way:
 
 <pre class="textmate-source"><span class="source source_shell">bash <span class="keyword keyword_operator keyword_operator_redirect keyword_operator_redirect_shell">&lt;</span> <span class="string string_interpolated string_interpolated_process-substitution string_interpolated_process-substitution_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">&lt;(</span> curl http://rvm.beginrescueend.com/releases/rvm-install-head <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">)</span></span></span></pre>
 
-That command simply uses curl to fetch the latest version of the installation script and then feeds it to your shell to run. For the curious or paranoid, at the time of this writing, the installation script looks like this:
+That command simply uses curl to fetch the latest version of the installation script and then feeds it to your shell to run. For the curious or paranoid, at the time of this writing, the installation script looks like this (note that you can always view the latest script before running it, simply by running the inner `curl` command without feeding its output to `bash`):
 
 <pre class="textmate-source"><span class="source source_shell"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span>!/usr/bin/env bash
 </span><span class="meta meta_scope meta_scope_if-block meta_scope_if-block_shell"><span class="keyword keyword_control keyword_control_shell">if</span> <span class="meta meta_scope meta_scope_logical-expression meta_scope_logical-expression_shell"><span class="punctuation punctuation_definition punctuation_definition_logical-expression punctuation_definition_logical-expression_shell">[[</span> <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_shell">-f</span> /etc/rvmrc <span class="punctuation punctuation_definition punctuation_definition_logical-expression punctuation_definition_logical-expression_shell">]]</span></span> <span class="keyword keyword_operator keyword_operator_list keyword_operator_list_shell">;</span> <span class="keyword keyword_control keyword_control_shell">then</span> <span class="support support_function support_function_builtin support_function_builtin_shell">source</span> /etc/rvmrc <span class="keyword keyword_operator keyword_operator_list keyword_operator_list_shell">;</span> <span class="keyword keyword_control keyword_control_shell">fi</span></span>
@@ -89,7 +89,9 @@ rvm 1.9.1
 </span>rvm list
 </span></pre>
 
-RVM can do even fancier, more complicated things for you, but this is plenty to get you started. Again, read the excellent documentation. If you get very stuck or have trouble, visit #rvm on irc. RVM's creator Wayne E. Seguin is often there, and the room is helpful and friendly, in my experience. 
+RVM can do even fancier, more complicated things for you, but this is plenty to get you started. Again, read the [excellent documentation][rvm-doc]. If you get very stuck or have trouble, visit #rvm on irc. RVM's creator Wayne E. Seguin is often there, and the room is helpful and friendly, in my experience.
+
+[rvm-doc]: http://rvm.beginrescueend.com/rvm/
 
 ## Installing and using Perlbrew
 
