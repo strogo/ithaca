@@ -38,51 +38,50 @@ Even less fancy, but again, it may be useful sometime to have these collected so
 
 There's no preference to change the hideous default login background. Luckily, this works just fine:
 
-<pre class="textmate-source"><span class="source source_shell">defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture /path/to/picture.png</span></pre>
+    defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture \
+        /path/to/picture.png
 
 To manage multiple Ruby and Perl installations (and stay sane), use [rvm][rvm] and [App-perlbrew][perlbrew]. They both work on the same principle: they automate the installation of multiple language interpreters in your `$HOME` directory, and they make it easy to switch between interpreters. (`rvm` hides things away in `$HOME/.rvm`, and App-perlbrew puts things in `$HOME/perl5`. I prefer the tidiness of using a hidden directory, but it's not a dealbreaker. __Edit__: I didn't read the documentation carefully enough. You can change the default installation location easily. Simply set a different `PERLBREW_ROOT` prior to installation with export: `export PERLBREW_ROOT=/path/to/wherever/perlbrew`.) I'm going to write up a whole post just on these two later, but if you haven't checked them out, you should.
 
 If you have a Homebrew-installed Python and you install [Getmail][getmail], the binaries end up lost in `/usr/local/Cellar/python/2.x.x/bin` - far away from your likely `$PATH`. This breaks Mutt - or to be more precise, it means that Mutt can't receive mail. My solution: symlink the four Getmail binaries to `/usr/local/bin`. (There is probably a better fix for this, but I don't care enough about Python installations to bother searching for it.)
 
-<pre class="textmate-source"><span class="source source_shell">ln -s /usr/local/Cellar/python/2.6.5/bin/getmail /usr/local/bin/getmail
-ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_fetch /usr/local/bin/getmail_fetch
-ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_maildir /usr/local/bin/getmail_maildir
-ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_mbox /usr/local/bin/getmail_mbox</span></pre>
+    ln -s /usr/local/Cellar/python/2.6.5/bin/getmail /usr/local/bin/getmail
+    ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_fetch /usr/local/bin/getmail_fetch
+    ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_maildir /usr/local/bin/getmail_maildir
+    ln -s /usr/local/Cellar/python/2.6.5/bin/getmail_mbox /usr/local/bin/getmail_mbox
 
 Homebrew will install MPD, MPC and Flac just fine, but you will also need to create a `$HOME/.mpdconf`. Most of the file is standard, but the audio output is odd. (Thanks to Evan Hanson for this tip in his post about [MPD on OSX](http://evanhanson.com/2010/03/22/mpd-on-os-x/). I also hide my music files away in a hidden directory `$HOME/.musica`. Both MPD and MPC can find them there just fine, and I don't fiddle with them by hand. For whatever it's worth, here's my basic configuration file:
 
-<pre class="textmate-source"><span class="source source_shell">music_directory     <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.musica<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-playlist_directory  <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.mpd/playlists<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-db_file             <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.mpd/mpd.db<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-log_file            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.mpd/mpd.log<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-pid_file            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.mpd/mpd.pid<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-state_file          <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>~/.mpd/mpd.state<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
+    music_directory     "~/.musica"
+    playlist_directory  "~/.mpd/playlists"
+    db_file             "~/.mpd/mpd.db"
+    log_file            "~/.mpd/mpd.log"
+    pid_file            "~/.mpd/mpd.pid"
+    state_file          "~/.mpd/mpd.state"
 
+    user                "username"
+    bind_to_address     "any"
+    port                "6600"
+    log_level           "default"
+    metadata_to_use     "artist,album,title,track,name,genre,date,composer,performer,disc"
 
-user                <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>username<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-bind_to_address     <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>any<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-port                <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>6600<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-log_level           <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>default<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-metadata_to_use     <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>artist,album,title,track,name,genre,date,composer,performer,disc<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
+    input {
+    plugin              "curl"
+    }
 
-input <span class="meta meta_scope meta_scope_group meta_scope_group_shell"><span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">{</span>
-   plugin           <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>curl<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-<span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">}</span></span>
+    audio_output {
+        type            "httpd"
+        name            "My HTTP Stream"
+        port            "8000"
+        bitrate         "128"           # do not define if quality is defined
+        format          "44100:16:1"
+    }
+    audio_output {
+        type            "osx"
+        name            "OSX"
+    }
 
-
-audio_output <span class="meta meta_scope meta_scope_group meta_scope_group_shell"><span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">{</span>
-    <span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">type</span>            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>httpd<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-    name            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>My HTTP Stream<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-    port            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>8000<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-    bitrate         <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>128<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>           <span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> do not define if quality is defined
-</span>    format          <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>44100:16:1<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-<span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">}</span></span>
-audio_output <span class="meta meta_scope meta_scope_group meta_scope_group_shell"><span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">{</span>
-    <span class="punctuation punctuation_definition puctuation_definition_group punctuation_definition_group_shell">type</span>            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>osx<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-    name            <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>OSX<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
-<span class="punctuation punctuation_definition punctuation_definition_group punctuation_definition_group_shell">}</span></span>
-
-mixer_type          <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span>software<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span></span></pre>
+    mixer_type          "software"
 
 The HTTPD output is not necessary if you don't want to stream music over HTTP. I haven't bothered to set up a Launchd item so that MPD launches automatically on boot. I should, but I need to read up first on Launchd. For the moment, I just launch it manually when I want music. (There's a discussion on the MPD wiki [about setting up Launchd][launchd], but it's a bit brief. I want to read more about the whole process first.) 
 

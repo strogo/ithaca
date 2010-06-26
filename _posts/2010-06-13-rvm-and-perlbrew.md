@@ -29,65 +29,64 @@ First of all, RVM has [excellent documentation][rvm-doc] on its website. You sho
 
 As a regular user, install this way:
 
-<pre class="textmate-source"><span class="source source_shell">bash <span class="keyword keyword_operator keyword_operator_redirect keyword_operator_redirect_shell">&lt;</span> <span class="string string_interpolated string_interpolated_process-substitution string_interpolated_process-substitution_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">&lt;(</span> curl http://rvm.beginrescueend.com/releases/rvm-install-head <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">)</span></span></span></pre>
+    bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 
 That command simply uses curl to fetch the latest version of the installation script and then feeds it to your shell to run. For the curious or paranoid, at the time of this writing, the installation script looks like this (note that you can always view the latest script before running it, simply by running the inner `curl` command without feeding its output to `bash`):
 
-<pre class="textmate-source"><span class="source source_shell"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span>!/usr/bin/env bash
-</span><span class="meta meta_scope meta_scope_if-block meta_scope_if-block_shell"><span class="keyword keyword_control keyword_control_shell">if</span> <span class="meta meta_scope meta_scope_logical-expression meta_scope_logical-expression_shell"><span class="punctuation punctuation_definition punctuation_definition_logical-expression punctuation_definition_logical-expression_shell">[[</span> <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_shell">-f</span> /etc/rvmrc <span class="punctuation punctuation_definition punctuation_definition_logical-expression punctuation_definition_logical-expression_shell">]]</span></span> <span class="keyword keyword_operator keyword_operator_list keyword_operator_list_shell">;</span> <span class="keyword keyword_control keyword_control_shell">then</span> <span class="support support_function support_function_builtin support_function_builtin_shell">source</span> /etc/rvmrc <span class="keyword keyword_operator keyword_operator_list keyword_operator_list_shell">;</span> <span class="keyword keyword_control keyword_control_shell">fi</span></span>
+    #!/usr/bin/env bash
+    if [[ -f /etc/rvmrc ]] ; then source /etc/rvmrc ; fi
 
-<span class="meta meta_scope meta_scope_if-block meta_scope_if-block_shell"><span class="keyword keyword_control keyword_control_shell">if</span> <span class="meta meta_scope meta_scope_logical-expression meta_scope_logical-expression_shell"><span class="punctuation punctuation_definition punctuation_definition_logical-expression punctuation_definition_logical-expression_shell">[[</span> <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_shell">-f</span> <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span><span class="variable variable_other variable_other_normal variable_other_normal_shell"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">$</span>HOME</span>/.rvmrc<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span> <span class="punctuation punctuation_definition punctuation_definition_logical-expression punctuation_definition_logical-expression_shell">]]</span></span> <span class="keyword keyword_operator keyword_operator_list keyword_operator_list_shell">;</span> <span class="keyword keyword_control keyword_control_shell">then</span> <span class="support support_function support_function_builtin support_function_builtin_shell">source</span> <span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span><span class="variable variable_other variable_other_normal variable_other_normal_shell"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">$</span>HOME</span>/.rvmrc<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span> <span class="keyword keyword_operator keyword_operator_list keyword_operator_list_shell">;</span> <span class="keyword keyword_control keyword_control_shell">fi</span></span>
+    if [[ -f "$HOME/.rvmrc" ]] ; then source "$HOME/.rvmrc" ; fi
 
-rvm_path=<span class="string string_quoted string_quoted_double string_quoted_double_shell"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_shell">"</span><span class="variable variable_other variable_other_bracket variable_other_bracket_shell"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">${</span>rvm_path<span class="keyword keyword_operator keyword_operator_expansion keyword_operator_expansion_shell">:-</span>$HOME<span class="keyword keyword_operator keyword_operator_expansion keyword_operator_expansion_shell">/</span>.rvm<span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_shell">"</span></span>
+    rvm_path="${rvm_path:-$HOME/.rvm}"
 
-mkdir -p <span class="variable variable_other variable_other_normal variable_other_normal_shell"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">$</span>rvm_path</span>/src/
+    mkdir -p $rvm_path/src/
 
-<span class="support support_function support_function_builtin support_function_builtin_shell">builtin</span> <span class="support support_function support_function_builtin support_function_builtin_shell">cd</span> <span class="variable variable_other variable_other_normal variable_other_normal_shell"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">$</span>rvm_path</span>/src
+    builtin cd $rvm_path/src
 
-rm -rf ./rvm/ 
+    rm -rf ./rvm/ 
 
-git clone --depth 1 git://github.com/wayneeseguin/rvm.git
+    git clone --depth 1 git://github.com/wayneeseguin/rvm.git
 
-<span class="support support_function support_function_builtin support_function_builtin_shell">builtin</span> <span class="support support_function support_function_builtin support_function_builtin_shell">cd</span> rvm
+    builtin cd rvm
 
-dos2unix scripts/<span class="keyword keyword_operator keyword_operator_glob keyword_operator_glob_shell">*</span> <span class="keyword keyword_operator keyword_operator_redirect keyword_operator_redirect_shell">&gt;</span>/dev/null <span class="keyword keyword_operator keyword_operator_redirect keyword_operator_redirect_shell">2&gt;&amp;1</span>
+    dos2unix scripts/* >/dev/null 2>&1
 
-bash ./scripts/install</span></pre>
+    bash ./scripts/install
 
 When things are done, you will be prompted to add some lines to your shell's startup files, sourcing RVM. Add the necessary lines, and then either open a new shell or re-source your startup files. You're now ready to use RVM.
 
 Some essential commands, with brief explanation about what each does:
 
-<pre class="textmate-source"><span class="source source_shell"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> get help - these two are equivalent, very helpfully
-</span>rvm --<span class="support support_function support_function_builtin support_function_builtin_shell">help</span>
-rvm usage
+    # get help - these two are equivalent, very helpfully
+    rvm --help
+    rvm usage
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> install and uninstall Rubies
-</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> NB: you need to specify a patchlevel only if you want to install
-</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> a patchlevel that isn't the default for rvm. At the moment, the
-</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> default patchlevel for 1.8.7 is p174, and I'm living on the edge.
-</span>rvm install 1.8.7-p249
-rvm uninstall 1.8.7-p249
-rvm install 1.9.1
+    # install and uninstall Rubies
+    # NB: you need to specify a patchlevel only if you want to install
+    # a patchlevel that isn't the default for rvm. At the moment, the
+    # default patchlevel for 1.8.7 is p174, and I'm living on the edge.
+    rvm install 1.8.7-p249
+    rvm uninstall 1.8.7-p249
+    rvm install 1.9.1
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> switch to a specific version of Ruby
-</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> again, the patchlevel isn't necessary unless you've installed a
-</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> non-default version of that interpreter
-</span>rvm 1.8.7-p249
-rvm 1.9.1
+    # switch to a specific version of Ruby
+    # again, the patchlevel isn't necessary unless you've installed a
+    # non-default version of that interpreter
+    rvm 1.8.7-p249
+    rvm 1.9.1
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> choose a default Ruby for new shells
-</span>rvm --default 1.9.1
+    # choose a default Ruby for new shells
+    rvm --default 1.9.1
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> switch to the default you've set
-</span>rvm default
+    # switch to the default you've set
+    rvm default
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> switch to the system's built-in Ruby interpreter, pre-rvm
-</span>rvm system
+    # switch to the system's built-in Ruby interpreter, pre-rvm
+    rvm system
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> show what rvm has installed and is currently managing for you
-</span>rvm list
-</span></pre>
+    # show what rvm has installed and is currently managing for you
+    rvm list
 
 RVM can do even fancier, more complicated things for you, but this is plenty to get you started. Again, read the [excellent documentation][rvm-doc]. If you get very stuck or have trouble, visit #rvm on irc. RVM's creator Wayne E. Seguin is often there, and the room is helpful and friendly, in my experience.
 
@@ -97,33 +96,33 @@ RVM can do even fancier, more complicated things for you, but this is plenty to 
 
 Perlbrew is quite easy to install, but there's one thing worth considering before you do so. By default, Perlbrew will create a folder in your `$HOME` called perl5, and that's where it will install and manage various Perl interpreters. There's nothing especially wrong with this behavior (it's pretty standard, actually), but I prefer hidden directories (like RVM's `.rvm`) for things that I never view or touch except via the command-line. (I take this to the degree that my mail directories for Mutt and my music directories for MPD are hidden away as well.) If you are like me, or you want to change _where_ Perlbrew works in any way, it's easily done. All you need to do is set and export a `PERLBREW_ROOT` variable in your shell before installation (and later in your startup files). Even with that extra step, installing Perlbrew is as easy as this:
 
-<pre class="textmate-source"><span class="source source_shell"><span class="storage storage_modifier storage_modifier_shell">export</span> PERLBREW_ROOT=<span class="variable variable_other variable_other_normal variable_other_normal_shell"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_shell">$</span>HOME</span>/.perl5/perlbrew
-curl -LO http://xrl.us/perlbrew
-chmod +x perlbrew
-./perlbrew install</span></pre>
+    export PERLBREW_ROOT=$HOME/.perl5/perlbrew
+    curl -LO http://xrl.us/perlbrew
+    chmod +x perlbrew
+    ./perlbrew install
 
 As with RVM, after you install Perlbrew, you will need to add some initialization to your shell's startup files. Once you've done that, open a new shell or re-source your startup files. Using Perlbrew then is as easy as this (these examples are taken directly from Perlbrew's own documentation, which you can get via `perlbrew -h`):
 
-<pre class="textmate-source"><span class="source source_shell"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> Install some Perls
-</span>perlbrew install perl-5.12.0
-perlbrew install perl-5.13.0
+    # Install some Perls
+    perlbrew install perl-5.12.0
+    perlbrew install perl-5.13.0
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> Install from a git checkout
-</span><span class="support support_function support_function_builtin support_function_builtin_shell">cd</span> /path/to/src/perl
-perlbrew install <span class="support support_function support_function_builtin support_function_builtin_shell">.</span>
+    # Install from a git checkout
+    cd /path/to/src/perl
+    perlbrew install .
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> See what were installed
-</span>perlbrew installed
+    # See what were installed
+    perlbrew installed
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> Switch perl in the $PATH
-</span>perlbrew switch perl-5.13.0
-perl -v
+    # Switch perl in the $PATH
+    perlbrew switch perl-5.13.0
+    perl -v
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> Turn it off. Disable it.
-</span>perlbrew off
+    # Turn it off. Disable it.
+    perlbrew off
 
-<span class="comment comment_line comment_line_number-sign comment_line_number-sign_shell"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_shell">#</span> Turn it back on. Re-enable it.
-</span>perlbrew switch perl-5.13.0</span></pre>
+    # Turn it back on. Re-enable it.
+    perlbrew switch perl-5.13.0
 
 ## Wrapping up
 
