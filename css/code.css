@@ -1,0 +1,19 @@
+pre { 
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 15px;
+  border-left: solid black 30px;
+  font-family: "inconsolata-1", "inconsolata-2", Consolas, Mensch, Menlo, Monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 14px;
+  line-height: 1.3em;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  background: #fff;
+  color: #000;
+  border-left: 
+}
