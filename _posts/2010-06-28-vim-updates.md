@@ -18,7 +18,7 @@ I have no idea what that header means either. However, I do know that Tim Pope's
 
 Oh, ok, here's a brief run through of how to get it and set it up:
 
-+  If you already have lots of things in `$HOME/.vim`, then the thing is to move that entire folder out of the way and start fresh. It's a bit of work to repopulate your add-ons (took me about an hour and a half to get things all just so again), but it's worth it.
++  If you already have lots of things in `$HOME/.vim`, then the best thing is to move that entire folder out of the way and start fresh. It's a bit of work to repopulate your add-ons (took me about an hour and a half to get things all just so again), but it's worth it.
 
         cd ~
         mv .vim vim_backup-`date "+"%Y-%m-%d"`
@@ -60,9 +60,9 @@ Cool, huh?
 
 ## What's in your status line?
 
-I had never really messed with my Vim status line. The status line, if you don't already know, is the bar right down at the bottom of your editor with information about what you're currently doing. If you've enabled it but not tweaked it's settings, it probably has the name of the file your working on and some information about the line and column number of the cursor. Useful, but not exciting.
+I had never really messed with my Vim status line. The status line, if you don't already know, is the bar right down at the bottom of your editor with information about what you're currently doing. If you've enabled it but not tweaked its settings, it probably has the name of the file your working on and some information about the line and column number of the cursor. Useful, but not exciting.
 
-Then a few days ago @bryanl asked people ([on Twitter][tweet]) about their Vim status lines. I looked at a few, thought about it and got to work. A couple of days later, and I'm finally done. (Along the way, I learned a bit of Vimscript and went back and forth a bunch with @fuzzymonk about how to get [rvm.vim][rvm.vim] to show your current Ruby interpreter in the status line just right. Lots of fun.)
+Then a few days ago @bryanl asked people [on Twitter][tweet] about their Vim status lines. I looked at a few, thought about it and got to work. A couple of days later, and I'm finally done. (Along the way, I learned a bit of Vimscript and went back and forth a bunch with @fuzzymonk about how to get [rvm.vim][rvm.vim] to show your current Ruby interpreter in the status line just right. Lots of fun.)
 
 Here's the final result of my labors:
 
