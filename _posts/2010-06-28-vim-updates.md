@@ -69,7 +69,7 @@ Here's the final result of my labors:
     " status line hijinks
     set statusline=%<%f\ %h%m%r%y
     \%{exists('g:loaded_fugitive')?fugitive#statusline():''}
-    \%{(exists('g:loaded_rvm'))?rvm#statusline_ft_ruby():''}
+    \%{exists('g:loaded_rvm')?rvm#statusline_ft_ruby():''}
     \%{&filetype=='perl'?'['.system($perlv).']':''}
     \%=%-14.(%l,%c%V%)\ %P
 
