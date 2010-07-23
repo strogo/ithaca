@@ -84,6 +84,10 @@ If you're visually inclined, try this:
 
 I was able to get the current Ruby interpreter into the status line by installing Christoper Sexton's [rvm.vim][rvm.vim], as I said, but what about the current Perl interpreter? This turned out to be surprisingly tricky, and it highlights a difference between [rvm][rvm] and [perlbrew][perlbrew] that I didn't mention [in my last post][post]. Whereas rvm exports a _lot_ of variables into your environment, perlbrew does not. That means that it's harder to get the information from perlbrew to Vim. (This isn't a criticism of perlbrew or rvm. They just handle things differently. Perlbrew is a pure Perl solution, and by definition a Perl script cannot export environmental variables back into its parent process. This is a good thing for security reasons. On the other hand, rvm makes use of Bash scripting, and this obviously can alter your environment. Neither way is better or worse. In different situations, they each have strengths or challenges.)
 
+**Edit 2010-08-23:** Please ignore the crossed out bits below. I've worked out a slightly better solution and hope to post about it soon.
+
+<del>
+
 Here's what I ended up doing. To manage your current Perl installation, Perlbrew switches a mess of symlinks in `$PERLBREW_ROOT/perlbrew/bin`. At any given moment, however, `perl` is guaranteed to point at your current Perl interpreter. And obviously Perl itself knows its version (it's in the built-in variable `$^V` for 5.6 and higher). So, I created this environment variable:
 
     export perlv='perl -e "print $^V"'
@@ -97,6 +101,10 @@ Finally, if you want the Perl interpreter in a Bash prompt or Bash script, simpl
     echo $(eval $perlv)
 
 Again, not elegant, but it's the best I could come up with right now.
+
+</del>
+
+
 
 [rvm]: http://rvm.beginrescueend.com/
 [perlbrew]: http://search.cpan.org/perldoc?App::perlbrew
