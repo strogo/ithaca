@@ -53,7 +53,7 @@ Ruby understanding for me.
 ## First solution: use the `self`
 
 The first (and so far, only) response to my SO question began, "So what if
-it's private." The author then reminded me that there are ways around that
+it's private?" The author then reminded me that there are ways around that
 kind of privacy:
 
     class Worker
