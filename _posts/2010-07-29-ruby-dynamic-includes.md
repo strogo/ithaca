@@ -73,7 +73,7 @@ class). Works great, and for my specific use-case, this is the answer. It
 does mean, however, that *all* instances of this class share the same
 `include`. But the response I got also showed me another way.
 
-## Let each instance do its own thing
+## Second solution: let each instance do its own thing
 
 In my case, all instances should work together. Either they all do a dry
 run only, or they all do it for real. But sometimes, you will want more
