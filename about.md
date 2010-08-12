@@ -11,7 +11,7 @@ Two main reasons: I want to write more, and I want a place to put longer notes t
 
 ## How?
 
-[Vim][v] + [Jekyll][j] + [Git][g] + [Github][gh] + various Macs = this site. [Typekit][t] provides the fonts, and Twitter's [@Anywhere][@] provides the hovercards. (See the next paragraph if you're not sure what I mean by hovercard. Hover over my Twitter name there.) The source of the site is available at Github, if you're curious: [http://github.com/telemachus/ithaca](http://github.com/telemachus/ithaca). [Geekisp][gi] does the hosting.
+[Vim][v] + [Jekyll][j] + [Git][g] + [Github][gh] + various Macs = this site. [Typekit][t] provides the fonts. The source of the site is available at Github, if you're curious: [http://github.com/telemachus/ithaca](http://github.com/telemachus/ithaca). [Geekisp][gi] does the hosting.
 
 [v]: http://www.vim.org/
 [j]: http://wiki.github.com/mojombo/jekyll/
