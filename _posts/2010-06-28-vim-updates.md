@@ -21,7 +21,7 @@ Oh, ok, here's a brief run through of how to get it and set it up:
 +  If you already have lots of things in `$HOME/.vim`, then the best thing is to move that entire folder out of the way and start fresh. It's a bit of work to repopulate your add-ons (took me about an hour and a half to get things all just so again), but it's worth it.
 
         cd ~
-        mv .vim vim_backup-`date "+"%Y-%m-%d"`
+        mv .vim vim_backup-`date "+%Y-%m-%d"`
         rm -rf .vim
         mkdir -p .vim/{autoload,bundle}
         cd autoload
