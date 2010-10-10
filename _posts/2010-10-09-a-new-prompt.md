@@ -63,7 +63,7 @@ For months, my `$HOME/.bashrc` had a big fat FIXME above the prompt. Like most s
 
             branch=${txtwht}${branch}${end}
             git_bit="${bldred}[${end}${branch}${state}\
-            ${git_bit}${direction}${bldred}]${end}"
+        ${git_bit}${direction}${bldred}]${end}"
 
             printf "%s" "$git_bit"
         }
@@ -71,7 +71,7 @@ For months, my `$HOME/.bashrc` had a big fat FIXME above the prompt. Like most s
         function set_titlebar {
             case $TERM in
                 *xterm*|ansi|rxvt)
-                    echo -n -e "\033]0;$*\007"
+                    printf "\033]0;%s\007" "$*"
                     ;;
             esac
         }
