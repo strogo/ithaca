@@ -35,7 +35,7 @@ You can then test that all is working well by `cd`-ing into a repo and running: 
 Now for the fine print.
 
 + You are putting your Github password into a file in the clear. Depending on your machine's physical and network security, this might be a very **bad** idea. You've been warned.
-+ This won't work with the URLs that Github's current UI suggests for HTTP, the ones that look like this: `https://telemachus@github.com/telemachus/ithaca.git`. According to @atmos, those exist for backward compatibility with older versions of git, and they are served from a different machine. Simply translate such URLs to `http://github.com/telemachus/ithaca.git`, and you're good to go.
++ This won't work with the URLs that Github currently suggests for HTTP, the ones that look like this: `https://telemachus@github.com/telemachus/ithaca.git`. According to @atmos, those exist for backward compatibility with older versions of git, and they are served from a different machine. Simply translate such URLs to `http://github.com/telemachus/ithaca.git`, and you're good to go.
 + That said, this also won't work with earlier versions of git (where earlier means 1.6 or lower, I think). So, depending on what version of git you're using, this whole idea might be moot for you.
 
 If I've made any mistakes or you think this is a terrible idea, feel free to let me know at telemachus /at/ arpinum /dot/ org. Otherwise, I hope you find this as useful as I did.
