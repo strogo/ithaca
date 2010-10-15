@@ -39,3 +39,5 @@ Now for the fine print.
 + That said, this also won't work with earlier versions of git (where earlier means 1.6 or lower, I think). So, depending on what version of git you're using, this whole idea might be moot for you.
 
 If I've made any mistakes or you think this is a terrible idea, feel free to let me know at telemachus /at/ arpinum /dot/ org. Otherwise, I hope you find this as useful as I did.
+
+**Edit**: A quick follow-up - An early commenter on [Hacker News](http://news.ycombinator.com/item?id=1793220) suggests that an ssh-agent is a better way overall to handle password-free login. I don't want to steer anyone wrong, so see comments there for counter arguments to this post.
