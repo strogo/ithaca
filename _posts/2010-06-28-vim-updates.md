@@ -89,7 +89,9 @@ I was able to get the current Ruby interpreter into the status line by installin
 **Edit 2010-08-06:** Ok, I finally have the better solution worked out so
 that it's presentable. See [today's post for more][t]
 
-<del>Here's what I ended up doing. To manage your current Perl installation, Perlbrew switches a mess of symlinks in `$PERLBREW_ROOT/perlbrew/bin`. At any given moment, however, `perl` is guaranteed to point at your current Perl interpreter. And obviously Perl itself knows its version (it's in the built-in variable `$^V` for 5.6 and higher). So, I created this environment variable:
+<del>
+
+Here's what I ended up doing. To manage your current Perl installation, Perlbrew switches a mess of symlinks in `$PERLBREW_ROOT/perlbrew/bin`. At any given moment, however, `perl` is guaranteed to point at your current Perl interpreter. And obviously Perl itself knows its version (it's in the built-in variable `$^V` for 5.6 and higher). So, I created this environment variable:
 
     export perlv='perl -e "print $^V"'
 
@@ -101,7 +103,9 @@ Finally, if you want the Perl interpreter in a Bash prompt or Bash script, simpl
 
     echo $(eval $perlv)
 
-Again, not elegant, but it's the best I could come up with right now.</del>
+Again, not elegant, but it's the best I could come up with right now.
+
+</del>
 
 
 
