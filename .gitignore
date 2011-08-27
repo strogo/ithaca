@@ -1,0 +1,4 @@
+.rbenv-gemsets
+.sass-cache/
+output/
+tmp/
