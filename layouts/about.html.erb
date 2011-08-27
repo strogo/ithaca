@@ -1,0 +1,19 @@
+---
+title: About
+h1: A little background
+---
+
+<div id="home">&lArr; <a href="/">Return home</a></div>
+
+<h1><%= @item[:h1] %></h1>
+
+<%= yield %>
+
+<div id="footer">
+  <ul id="nav">
+    <li><a href="/">Home</a></li>
+    <li id="here">| About</li>
+    <li >| <a href="/about.html">Archive</a></li>
+    <li>| <a href="/atom.xml">Subscribe</a></li>
+  </ul>
+</div>

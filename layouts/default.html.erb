@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %> | <%= @site.config[:title] %></title>
+    <meta name="author" content="Peter Aronoff">
+    <link href="/atom.xml" rel="alternate" title="ithaca" type="application/atom+xml">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css" media="screen, projection">
+    <link rel="stylesheet" href="css/screen.css" media="screen, projection">
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
