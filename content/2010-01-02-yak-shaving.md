@@ -21,30 +21,30 @@ Before long, I have a deeply nested stack of things I need to do before I can ge
 Here's an abbreviated list (with sub-lists, naturally) of things I did first.
 
 + Push it way back and worry about platforms and version control:
-	+ Git or Subversion?
-	+ Ruby or Perl?
-	+ Jekyll or Rails?
-		+ Markdown?
-		+ Textile?
-		+ Haml?
+    + Git or Subversion?
+    + Ruby or Perl?
+    + Jekyll or Rails?
+        + Markdown?
+        + Textile?
+        + Haml?
 + Are my standards in order?
-	+ XHTML or HTML?
-	+ HTML5 or HTML4?
-	+ I should really learn more about HTML...
-		+ Microformats?
-		+ This whole semantic markup thing sounds cool. Let's read more about that.
-		+ Do I really understand REST? 
-			+ I really need to know more about HTTP...
+    + XHTML or HTML?
+    + HTML5 or HTML4?
+    + I should really learn more about HTML...
+        + Microformats?
+        + This whole semantic markup thing sounds cool. Let's read more about that.
+        + Do I really understand REST? 
+            + I really need to know more about HTTP...
 + Should it have a feed?
-	+ RSS?
-	+ Atom?
-	+ Feedburner or do-it-myself?
+    + RSS?
+    + Atom?
+    + Feedburner or do-it-myself?
 + Comments?
-	+ DISQUS?
-	+ IntenseDebate?
+    + DISQUS?
+    + IntenseDebate?
 + What should the site look like?
-	+ CSS?
-	+ Sass?
+    + CSS?
+    + Sass?
 
 At some point around here, I broke out of that cycle of despair. I realized that although I had read a lot and thought a lot and learned some useful things, I was hopeless. A few coincidences helped. First, I read [Project Stack Push/Pop][push] by Dave Rolsky and saw [Randal Schwartz's comment][comment] about [yak shaving][yak]. The article struck a nerve because it fit too well *and* my time-wasters aren't nearly as productive as Rolsky's. Second I'm a teacher, so I just had a two-week vacation. Naturally I planned to (finally) get the site going, and naturally I made zero headway. Finally, a new year just began. Although I don't really go in for resolutions, inevitably you get that hopeful but scary feeling that it's a clean slate and anything is possible.
 
