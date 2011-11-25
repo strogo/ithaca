@@ -22,7 +22,7 @@ plugin][haskellmode].
 [website]: https://twitter.com/#!/telemachus/status/139740914284371968
 [darcs2]: https://twitter.com/#!/telemachus/status/139741326672535553
 [vimballs]: https://twitter.com/#!/telemachus/status/139742981539373056
-[haskellmode]: https://twitter.com/#!/telemachus/status/139742981539373056
+[haskellmode]: https://twitter.com/#!/telemachus/status/139746278488813568
 
 All of this was in the space of about thirty minutes. I wasn't patient.
 I didn't try to understand my problems better. I wanted things to work
