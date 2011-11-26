@@ -82,8 +82,13 @@ rethink how I'm handling this over the next few days, but if you have any
 suggestions, please let me know via [Twitter][tel]. You can also discuss
 this post on [Hacker News][hn] or [Reddit][r].
 
+**Edit**: (20111125) The colorscheme in the screenshot is Anthony
+Carapetis&rsquo; [github.vim][cs]. A number of people asked, so I thought
+I should add it here.
+
 [so]: http://stackoverflow.com/questions/8168320/can-vim-highlight-matching-html-tags-like-notepad
 [shot]: http://i.stack.imgur.com/swLB4.png
 [tel]: https://twitter.com/#!/telemachus
 [hn]: http://news.ycombinator.com/item?id=3266233
 [r]: http://www.reddit.com/r/vimplugins/comments/mlnir/two_new_vim_plugins/
+[cs]: http://www.vim.org/scripts/script.php?script_id=2855
