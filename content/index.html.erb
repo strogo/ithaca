@@ -2,11 +2,11 @@
 title: Home
 ---
 
-<h1 id="title"><%= @site.config[:title] %><span id="subtitle">: a digital homecoming</span></h1>
+<h1 class="title"><%= @site.config[:title] %><span class="subtitle">: a digital homecoming</span></h1>
 
-<h2 id="h_banner">Recent arrivals...</h2>
+<h2 class="h_banner">Recent arrivals...</h2>
 
-<ul id="archive">
+<ul class="archive">
   <% sorted_articles[0..4].each do |article| %>
     <li>
       <span><%= article.attributes[:created_at] %> &middot; </span>
@@ -15,9 +15,9 @@ title: Home
   <% end %>
 </ul>
 
-<div id="footer">
-  <ul id="nav">
-    <li id="here">Home</li>
+<div class="footer">
+  <ul class="nav">
+    <li class="here">Home</li>
     <li>| <a href="/about.html">About</a></li>
     <li>| <a href="/archive.html">Archive</a></li>
     <li>| <a href="/atom.xml">Subscribe</a></li>
