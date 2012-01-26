@@ -24,9 +24,9 @@ much more organized `~/.vim` directory. (It also works very nicely with
 version control, since you can maintain each of the separate plugins in its
 own version-controlled folder.)
 
-[ub-gh]: http://snk.tuxfamily.org/log/vim-script-management-system.html
+[ub-gh]: https://github.com/sunaku/vim-unbundle/#readme
 [p]: https://github.com/tpope/vim-pathogen
-[post]: http://snk.tuxfamily.org/log/vim-script-management-system.html
+[post]: http://ithaca.arpinum.org/2010/06/28/vim-updates.html
 
 Unbundle, which [Suraj N. Kurapati wrote][snj], does the same basic thing
 as Pathogen. However, it's meant to be lighter, and it has one nice
