@@ -14,19 +14,19 @@
 
   <body>
 
-    <div id="home">&lArr; <a href="/">Return home</a></div>
+    <div class="home">&lArr; <a href="/">Return home</a></div>
 
-    <h1 id="top"><%= @item[:h1] %></h1>
-    <div id="stamp">
+    <h1 class="top"><%= @item[:h1] %></h1>
+    <div class="stamp">
       <%= @item[:location] %> &middot; <%= @item[:created_at] %>
     </div>
 
     <%= yield %>
 
-    <div id="up">&uArr; <a href="#home">Back to top</a></div>
+    <div class="up">&uArr; <a href="#home">Back to top</a></div>
 
-    <div id="footer">
-      <ul id="nav">
+    <div class="footer">
+      <ul class="nav">
         <li><a href="/">Home</a></li>
         <li>| <a href="/about.html">About</a></li>
         <li>| <a href="/archive.html">Archive</a></li>
