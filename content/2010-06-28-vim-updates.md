@@ -91,25 +91,19 @@ I was able to get the current Ruby interpreter into the status line by installin
 **Edit 2010-08-06:** Ok, I finally have the better solution worked out so
 that it's presentable. See [today's post for more][t]
 
-<del>
-
-Here's what I ended up doing. To manage your current Perl installation, Perlbrew switches a mess of symlinks in `$PERLBREW_ROOT/perlbrew/bin`. At any given moment, however, `perl` is guaranteed to point at your current Perl interpreter. And obviously Perl itself knows its version (it's in the built-in variable `$^V` for 5.6 and higher). So, I created this environment variable:
+<del>Here's what I ended up doing. To manage your current Perl installation, Perlbrew switches a mess of symlinks in `$PERLBREW_ROOT/perlbrew/bin`. At any given moment, however, `perl` is guaranteed to point at your current Perl interpreter. And obviously Perl itself knows its version (it's in the built-in variable `$^V` for 5.6 and higher). So, I created this environment variable:</del>
 
     export perlv='perl -e "print $^V"'
 
-Notice that's not an alias. It's a variable. Variables in your current environment are available to Vimscript by using the `$` prefix (just as in Bash itself you prefix variables with `$` when you want to use them). That's how rvm.vim gets your current Ruby interpreter: it's in `$rvm_ruby_version` (or other variables). Since perlbrew doesn't export such a variable, I created one, called 'perlv'. The magic comes when you consider what's in that variable and how Vim grabs it.
+<del>Notice that's not an alias. It's a variable. Variables in your current environment are available to Vimscript by using the `$` prefix (just as in Bash itself you prefix variables with `$` when you want to use them). That's how rvm.vim gets your current Ruby interpreter: it's in `$rvm_ruby_version` (or other variables). Since perlbrew doesn't export such a variable, I created one, called 'perlv'. The magic comes when you consider what's in that variable and how Vim grabs it.</del>
 
-The variable `$perlv` holds a string, and we grab it with Vimscript's built-in `system('command')` syntax. That syntax is normally for running external comamnds. By feeding `$perlv` to `system()` in this way, it's as if we're `eval`-ing the command that lies hiding in the string. It's a gross and utter hack, but it works. (It also switches when your Perl interpreter switches. Imagine you're already working in Vim and you issue `perlbrew switch perl-x.x.x`. Most of my initial solutions would never update the interpreter version. They were stuck with whatever version you had _when you started Vim_. However, the `perlv` solution updates: as soon as the status line refreshes, you will see the change.)
+<del>The variable `$perlv` holds a string, and we grab it with Vimscript's built-in `system('command')` syntax. That syntax is normally for running external comamnds. By feeding `$perlv` to `system()` in this way, it's as if we're `eval`-ing the command that lies hiding in the string. It's a gross and utter hack, but it works. (It also switches when your Perl interpreter switches. Imagine you're already working in Vim and you issue `perlbrew switch perl-x.x.x`. Most of my initial solutions would never update the interpreter version. They were stuck with whatever version you had _when you started Vim_. However, the `perlv` solution updates: as soon as the status line refreshes, you will see the change.)</del>
 
-Finally, if you want the Perl interpreter in a Bash prompt or Bash script, simply `eval` it:
+<del>Finally, if you want the Perl interpreter in a Bash prompt or Bash script, simply `eval` it:</del>
 
     echo $(eval $perlv)
 
-Again, not elegant, but it's the best I could come up with right now.
-
-</del>
-
-
+<del>Again, not elegant, but it's the best I could come up with right now.</del>
 
 [rvm]: http://rvm.beginrescueend.com/
 [perlbrew]: http://search.cpan.org/perldoc?App::perlbrew
