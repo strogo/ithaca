@@ -56,6 +56,7 @@ author_uri: "http://ithaca.arpinum.org"
 
 # A slight adjustment to the deploy task: delete-after
 deploy:
-  default:
+  geek:
+    kind: rsync
     dst: "telemachus@login.geekisp.com:/home/telemachus/ithaca.arpinum.org/htdocs"
     options: ['-gpPrtvz', '--delete-after']
