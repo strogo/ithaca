@@ -30,15 +30,15 @@ likely to ever want them again. In and of itself, that's not a huge deal.
 However, it makes it harder for me to find the gists I really care about in
 the sea of throw-away ones.
 
-So every now and again, I want to clean up my gists. This is where the
-trouble starts. When you visit [your primary gist-listing page][gists],
-there's no way to delete gists from that main page. You can see about
-fifteen or so gists, but to delete any of them, you must click on the
-gist's link and then delete it from an individual show page. After
-deletion, you're redirected back to the main gist show page. The pattern
-is: list gists, pick gist, delete gist, redirect, list gist, pick gist,
-delete gist, redirect and so forth. What I want is a simpler workflow: list
-gists, delete gist, delete gist, delete gist. Done.
+So every now and again, I want to clean up my gists. This turns out to be
+slightly harder than it should be. When you visit [your primary
+gist-listing page][gists], there's no way to delete gists from that main
+page. You can see about fifteen or so gists, but to delete any of them, you
+must click on the gist's link and then delete it from an individual show
+page. After deletion, you're redirected back to the main gist show page.
+The pattern is: list gists, pick gist, delete gist, redirect, list gist,
+pick gist, delete gist, redirect and so forth. What I want is a simpler
+workflow: list gists, delete gist, delete gist, delete gist. Done.
 
 As problems go, this isn't the end of the world. I posted a wishlist
 support ticket on Github, but so far no luck. Fixing it myself didn't occur
