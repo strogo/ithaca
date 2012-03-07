@@ -1,7 +1,7 @@
 ---
 title: Announcing gist-deleter v0.0.1
 kind: article
-created_at: 2012-02-20
+created_at: 2012-03-07
 location: New York, NY
 h1: Scratching An Itch
 ---
