@@ -18,7 +18,14 @@ visit [your main gists page][gists] and click the bookmarklet.
 
 <p><a href='(function(){function a(c){var d=document.createElement("span");var b=document.createElement("a");var e="/delete"+c;b.href=e;b.className="gistDeleter";b.innerHTML="delete this gist";b.onclick=function(f){$(b).closest("div.file").fadeOut();$.ajax(e,{type:"delete","data-method":"delete"});f.preventDefault()};$(d).append(b);return d }if($("a.gistDeleter").length===0){Array.prototype.slice.call($(".file .info span:first-child a")).forEach(function(b){var c=$(b).attr("href");$(b).closest("div.info").append(a(c))})} }());'>Gist deleter</a></p>
 
+**NB**: This is v0.0.2, thanks to [Mathias Lafeldt][ml] who pointed out
+that multiple clicks of the bookmarklet increased the number of links
+exponentially.
+
+**NB**: Now it's v0.0.3. Enjoy.
+
 [gists]: https://gist.github.com/mine
+[ml]: http://twitter.com/mlafeldt
 
 ## A little more explanation
 
