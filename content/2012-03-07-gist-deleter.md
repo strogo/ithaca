@@ -16,7 +16,7 @@ ten gists.)
 Drag the link below to your bookmarks bar. Then to activate it, simply
 visit [your main gists page][gists] and click the bookmarklet.
 
-<p><a href='javascript:(function(){function a(c){var d=document.createElement("span");var b=document.createElement("a");var e="/delete"+c;b.href=e;b.innerHTML="delete this gist";b.onclick=function(f){$(b).closest("div.file").fadeOut();$.ajax(e,{type:"delete","data-method":"delete"});f.preventDefault()};$(d).append(b);return d}Array.prototype.slice.call($("div.file div.info a")).forEach(function(b){var c=$(b).attr("href");$(b).closest("div.info").append(a(c))})}());'>Gist deleter</a></p>
+<p><a href='(function(){function a(c){var d=document.createElement("span");var b=document.createElement("a");var e="/delete"+c;b.href=e;b.className="gistDeleter";b.innerHTML="delete this gist";b.onclick=function(f){$(b).closest("div.file").fadeOut();$.ajax(e,{type:"delete","data-method":"delete"});f.preventDefault()};$(d).append(b);return d }if($("a.gistDeleter").length===0){Array.prototype.slice.call($(".file .info span:first-child a")).forEach(function(b){var c=$(b).attr("href");$(b).closest("div.info").append(a(c))})} }());'>Gist deleter</a></p>
 
 [gists]: https://gist.github.com/mine
 
