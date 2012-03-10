@@ -1,5 +1,5 @@
 ---
-title: Announcing gist-deleter v0.0.1
+title: Announcing gist-deleter v0.0.4
 kind: article
 created_at: 2012-03-07
 location: New York, NY
@@ -16,13 +16,15 @@ ten gists.)
 Drag the link below to your bookmarks bar. Then to activate it, simply
 visit [your main gists page][gists] and click the bookmarklet.
 
-<p><a href='javascript:(function(){function a(c){var d=document.createElement("span");var b=document.createElement("a");var e="/delete"+c;b.href=e;b.className="gistDeleter";b.innerHTML="delete this gist";b.onclick=function(f){$(b).closest("div.file").fadeOut();$.ajax(e,{type:"delete","data-method":"delete"});f.preventDefault()};$(d).append(b);return d }if($("a.gistDeleter").length===0){Array.prototype.slice.call($(".file .info span:first-child a")).forEach(function(b){var c=$(b).attr("href");$(b).closest("div.info").append(a(c))})} }());'>Gist deleter</a></p>
+<p><a href='javascript:(function(){function b(e){var f=document.createElement("span");var d=document.createElement("a");var g="/delete"+e;d.href=g;d.className="gistDeleter";d.innerHTML="delete this gist";d.onclick=function(h){$.ajax(g,{type:"delete","data-method":"delete",success:function(){$(d).closest("div.file").fadeOut()}});h.preventDefault()};$(f).append(d);return f}function a(){return window.location.host==="gist.github.com"&&window.location.pathname==="/mine"&&$("a.gistDeleter").length===0}if(a()){var c=Array.prototype.slice;c.call($(".file .info span:first-child a")).forEach(function(d){var e=$(d).attr("href");$(d).closest("div.info").append(b(e))})}}());'>Gist deleter</a></p>
 
 **NB**: This is v0.0.2, thanks to [Mathias Lafeldt][ml] who pointed out
 that multiple clicks of the bookmarklet increased the number of links
 exponentially.
 
 **NB**: Now it's v0.0.3. Enjoy.
+
+**NB**: And...v0.0.4. Amazing how quickly kids grow up, isn't it?
 
 [gists]: https://gist.github.com/mine
 [ml]: http://twitter.com/mlafeldt
