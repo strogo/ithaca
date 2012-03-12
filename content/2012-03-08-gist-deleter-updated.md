@@ -25,6 +25,6 @@ Gist-deleter v0.0.3 (actually now it's v0.0.4 already):
 
 <p><a href='javascript:(function(){function b(e){var f=document.createElement("span");var d=document.createElement("a");var g="/delete"+e;d.href=g;d.className="gistDeleter";d.innerHTML="delete this gist";d.onclick=function(h){$.ajax(g,{type:"delete","data-method":"delete",success:function(){$(d).closest("div.file").fadeOut()}});h.preventDefault()};$(f).append(d);return f}function a(){return window.location.host==="gist.github.com"&&window.location.pathname==="/mine"&&$("a.gistDeleter").length===0}if(a()){var c=Array.prototype.slice;c.call($(".file .info span:first-child a")).forEach(function(d){var e=$(d).attr("href");$(d).closest("div.info").append(b(e))})}}());'>Gist deleter</a></p>
 
-[mt]: https://twitter.com/mlafeldt
+[ml]: https://twitter.com/mlafeldt
 [t]: http://twitter.com/telemachus
 [gh]: https://github.com/telemachus/gist-deleter
