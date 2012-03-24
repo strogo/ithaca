@@ -1,5 +1,5 @@
 ---
-title: Gist-deleter v0.0.3
+title: Gist-deleter updated
 kind: article
 created_at: 2012-03-08
 location: New York, NY
@@ -21,7 +21,7 @@ delete your old version of gist-deleter and update it with the one below.
 If you find any trouble with this version, please let me know via
 [Github][gh] or [Twitter][t].
 
-Gist-deleter v0.0.3 (actually now it's v0.0.4 already):
+Gist-deleter v0.0.4
 
 <p><a href='javascript:(function(){function b(e){var f=document.createElement("span");var d=document.createElement("a");var g="/delete"+e;d.href=g;d.className="gistDeleter";d.innerHTML="delete this gist";d.onclick=function(h){$.ajax(g,{type:"delete","data-method":"delete",success:function(){$(d).closest("div.file").fadeOut()}});h.preventDefault()};$(f).append(d);return f}function a(){return window.location.host==="gist.github.com"&&window.location.pathname==="/mine"&&$("a.gistDeleter").length===0}if(a()){var c=Array.prototype.slice;c.call($(".file .info span:first-child a")).forEach(function(d){var e=$(d).attr("href");$(d).closest("div.info").append(b(e))})}}());'>Gist deleter</a></p>
 

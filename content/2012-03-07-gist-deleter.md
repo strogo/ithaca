@@ -1,5 +1,5 @@
 ---
-title: Announcing gist-deleter v0.0.4
+title: Announcing gist-deleter
 kind: article
 created_at: 2012-03-07
 location: New York, NY
