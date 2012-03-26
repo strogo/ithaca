@@ -1,4 +1,4 @@
-include Nanoc3::Helpers::Blogging
+include Nanoc::Helpers::Blogging
 require 'fileutils'
 
 def blog_route(item)
