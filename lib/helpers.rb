@@ -1,5 +1,6 @@
 include Nanoc::Helpers::Blogging
 require 'fileutils'
+require 'redcarpet'
 
 def blog_route(item)
   if not item.identifier.match(/\d{4}-\d{2}-\d{2}-/)
