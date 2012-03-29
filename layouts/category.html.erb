@@ -7,9 +7,8 @@
     <link href="/atom.xml" rel="alternate" title="ithaca" type="application/atom+xml">
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <link rel="stylesheet" href="../../../css/normalize.css" media="screen, projection">
-    <link rel="stylesheet" href="../../../css/screen.css" media="screen, projection">
-    <link rel="stylesheet" href="../../../css/code.css" media="screen, projection">
+    <link rel="stylesheet" href="../css/normalize.css" media="screen, projection">
+    <link rel="stylesheet" href="../css/screen.css" media="screen, projection">
   </head>
 
   <body>
@@ -17,28 +16,29 @@
     <div id="home">&lArr; <a href="/">Return home</a></div>
 
     <h1 class="top"><%= @item[:h1] %></h1>
-    <div class="stamp">
-      <%= @item[:location] %> &middot; <%= @item[:created_at] %>
-    </div>
 
-    <div class="categories">
-      <p>Categories: <%= link_categories(@item[:categories]).join(', ') %></p>
-    </div>
+    <% if @item[:posts].length > 0 %>
+      <ul class="archive">
+        <% @item[:posts].each do |p| %>
+          <li>
+            <span><%= p.attributes[:created_at] %> &middot; </span>
+            <a href="<%= url_for(p) %>"><%= p.attributes[:title] %></a>
+          </li>
+        <% end %>
+      </ul>
 
-    <%= yield %>
-
-    <div class="up">&uArr; <a href="#home">Back to top</a></div>
+    <% end %>
 
     <div class="footer group">
       <ul class="nav">
         <li><a href="/">Home</a></li>
-        <li>| <a href="../../../about.html">About</a></li>
-        <li>| <a href="../../../archive.html">Archive</a></li>
-        <li>| <a href="../../../categories.html">Categories</a></li>
+        <li>| <a href="../about.html">About</a></li>
+        <li>| <a href="../archive.html">Archive</a></li>
+        <li>| <a href="../categories.html">Categories</a></li>
       </ul>
       <ul class="me">
         <li>
-          <a href="../../../atom.xml" class="rss">Subscribe</a>
+          <a href="../atom.xml" class="rss">Subscribe</a>
         </li>
         <li>
           <a href="https://github.com/telemachus" class="github">Me @ Github</a>
@@ -48,5 +48,6 @@
         </li>
       </ul>
     </div>
+
   </body>
 </html>

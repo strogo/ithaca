@@ -1,0 +1,37 @@
+---
+title: Categories
+h1: Browse by Category
+---
+
+<div id="home">&lArr; <a href="/">Return home</a></div>
+
+<h1><%= @item[:h1] %></h1>
+
+<% cats = all_categories.sort %>
+<% if cats.length > 0 %>
+  <p>Here's what I've been writing about. Click a link to see all articles
+    about that topic.</p>
+  <p class="cloud"><%= link_categories(cats, 'categories/').join(' ') %></p>
+<% else %>
+  <p>No categories yet. Try again later.</p>
+<% end %>
+
+<div class="footer group">
+  <ul class="nav">
+    <li><a href="/">Home</a></li>
+    <li>| <a href="about.html">About</a></li>
+    <li>| <a href="archive.html">Archive</a></li>
+    <li class="here">| Categories</li>
+  </ul>
+  <ul class="me">
+    <li>
+      <a href="atom.xml" class="rss">Subscribe</a>
+    </li>
+    <li>
+      <a href="https://github.com/telemachus" class="github">Me @ Github</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/telemachus" class="twitter">Me @ Twitter</a>
+    </li>
+  </ul>
+</div>
