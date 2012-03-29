@@ -11,10 +11,14 @@
 # “/about/*” will also select the parent, because “*” matches
 # zero or more characters.
 
+preprocess do
+  create_category_pages
+end
+
 compile '/' do
   filter :erb
-  filter :typogruby
   layout 'default'
+  filter :typogruby
 end
 
 route '/' do
@@ -32,8 +36,8 @@ compile '/about/' do
   filter :erb
   filter :redcarpet
   filter :argh
-  filter :typogruby
   layout 'default'
+  filter :typogruby
 end
 
 route '/about/' do
@@ -42,8 +46,8 @@ end
 
 compile '/archive/' do
   filter :erb
-  filter :typogruby
   layout 'default'
+  filter :typogruby
 end
 
 route '/archive/' do
@@ -58,11 +62,31 @@ route '/atom/' do
   '/atom.xml'
 end
 
+compile '/categories/' do
+  filter :erb
+  layout 'default'
+  filter :typogruby
+end
+
+route '/categories/' do
+  '/categories.html'
+end
+
+compile '/categories/*/' do
+  filter :erb
+  layout 'category'
+  filter :typogruby
+end
+
+route '/categories/*/' do
+  item.identifier.chop + '.html'
+end
+
 compile %r{^/201[0-9]{1}-[0-9]{2}-[0-9]{2}} do
   filter :redcarpet
   filter :argh
-  filter :typogruby
   layout 'post'
+  filter :typogruby
 end
 
 route %r{^/201[0-9]{1}-[0-9]{2}-[0-9]{2}} do
