@@ -1,10 +1,15 @@
 ---
 layout: post
-title: FTP meet HTTPS
+title: FTP Meet HTTPS
 kind: article
 created_at: 2010-10-14
 location: New York, NY
-h1: An easier way to talk to Github
+h1: An Easier Way to Talk to Github
+categories:
+- http
+- authentication
+- ftp
+- netrc
 ---
 
 ## Grandpa, what's FTP?

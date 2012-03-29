@@ -1,9 +1,16 @@
 ---
-title: Yak shaving
+title: Yak Shaving
 kind: article
 created_at: 2010-01-02
 location: New York, NY
-h1: Yak shaving
+h1: Yak Shaving
+categories:
+- vergil
+- yak-shaving
+- css
+- personal
+- blog
+- writing
 ---
 
 ## Huh?

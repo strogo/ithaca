@@ -1,10 +1,18 @@
 ---
 layout: post
-title: Some Vim-related notes
+title: Some Vim-related Notes
 kind: article
 created_at: 2010-06-28
 location: New York, NY
-h1: Vim for fun and profit
+h1: Vim for Fun and Profit
+categories:
+- vim
+- pathogen
+- rvm
+- ruby
+- perlbrew
+- perl
+- homebrew
 ---
 
 ## Vim rocks, but you knew that, right?

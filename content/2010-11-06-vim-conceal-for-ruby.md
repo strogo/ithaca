@@ -5,6 +5,10 @@ kind: article
 created_at: 2010-11-06
 location: New York, NY
 h1: This is completely silly, but oh so much fun...
+categories:
+- vim
+- ruby
+- conceal
 ---
 
 ## This is why Twitter is useful

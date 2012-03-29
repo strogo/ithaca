@@ -1,10 +1,17 @@
 ---
 layout: post
-title: Including Ruby modules dynamically
+title: Including Ruby Modules Dynamically
 kind: article
 created_at: 2010-07-29
 location: New York, NY
 h1: <code>include</code> is hard. Let's go shopping.
+categories:
+- ruby
+- include
+- fileutils
+- modules
+- privacy
+- stackoverflow
 ---
 
 ## You want what?

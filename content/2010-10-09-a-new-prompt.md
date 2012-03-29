@@ -5,6 +5,13 @@ kind: article
 created_at: 2010-10-09
 location: New York, NY
 h1: An overdue overhaul
+categories:
+- bash
+- zsh
+- git
+- prompt
+- ps1
+- git_ps1
 ---
 
 ## TODO: FIXME

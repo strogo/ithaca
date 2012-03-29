@@ -3,7 +3,14 @@ title: Two New Vim Plugins
 kind: article
 created_at: 2011-11-22
 location: New York, NY
-h1: "Vim: A work in progress"
+h1: "Vim: A Work in Progress"
+categories:
+- vim
+- unbundle
+- pathogen
+- matchtag
+- html
+- stackoverflow
 ---
 
 Like many Unix people, I'm perpetually tweaking, changing, updating and

@@ -1,9 +1,16 @@
 ---
-title: Announcing gist-deleter
+title: Announcing Gist-deleter
 kind: article
 created_at: 2012-03-07
 location: New York, NY
-h1: Scratching An Itch
+h1: Scratching an Itch
+categories:
+- bookmarklet
+- git
+- gist-deleter
+- javascript
+- jquery
+- github
 ---
 
 ## tl;dr

@@ -1,9 +1,16 @@
 ---
-title: Gist-deleter updated
+title: Gist-deleter Updated
 kind: article
 created_at: 2012-03-08
 location: New York, NY
 h1: More good. Less bad.
+categories:
+- git
+- gist-deleter
+- bookmarklet
+- javascript
+- jquery
+- github
 ---
 
 When I released gist-deleter yesterday, I knew it had one stupid flaw: if

@@ -4,6 +4,11 @@ kind: article
 created_at: 2012-02-20
 location: New York, NY
 h1: There's good news, and there's bad news.
+categories:
+- osx
+- yak-shaving
+- gcc
+- xcode
 ---
 
 ## The good news

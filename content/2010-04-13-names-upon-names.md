@@ -1,10 +1,15 @@
 ---
 layout: post
-title:  By any other name
+title:  By Any Other Name
 kind: article
 created_at: 2010-04-13
 location: New York, NY
-h1: On the internet, nobody knows you're a dog
+h1: On the internet, nobody knows you're a dog.
+categories:
+- telemachus
+- name
+- pseudonym
+- twitter
 ---
 
 ## I want my name - even if it's not actually my name

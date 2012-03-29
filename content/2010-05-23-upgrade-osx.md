@@ -1,10 +1,23 @@
 ---
 layout: post
-title: Notes on Snow Leopard upgrade
+title: Notes on Snow Leopard Upgrade
 kind: article
 created_at: 2010-05-23
 location: New York, NY
-h1: There's nothing new under the sun
+h1: There's nothing new under the sun.
+categories:
+- osx
+- upgrade
+- mpd
+- fonts
+- yak-shaving
+- rvm
+- perlbrew
+- inconsolata
+- inconsolata-dz
+- acl
+- launchd
+- homebrew
 ---
 
 ## The short version

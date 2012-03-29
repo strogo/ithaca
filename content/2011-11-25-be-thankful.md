@@ -4,6 +4,10 @@ kind: article
 created_at: 2011-11-25
 location: New York, NY
 h1: "Give thanks. Or at least, don't be such a jerk."
+categories:
+- thanksgiving
+- apology
+- rant
 ---
 
 ## The part where I'm an idiot

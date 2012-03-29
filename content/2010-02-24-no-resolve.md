@@ -1,10 +1,16 @@
 ---
 layout: post
-title: No resolve
+title: No Resolve
 kind: article
 created_at: 2010-02-24
 location: New York, NY
-h1: Akrasia strikes again
+h1: Akrasia Strikes Again
+categories:
+- ruby
+- functional-programming
+- twitter
+- blog
+- writing
 ---
 
 ## New Year's Resolutions and other failures

@@ -4,7 +4,12 @@ title: Rvm and Perlbrew
 kind: article
 created_at: 2010-06-13
 location: New York, NY
-h1: Two tools you should be using, if you aren't already
+h1: Meet two tools you should be using, if you aren't already.
+categories:
+- rvm
+- ruby
+- perlbrew
+- perl
 ---
 
 ## What were those names again?

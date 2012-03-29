@@ -1,10 +1,15 @@
 ---
 layout: post
-title: Fun With Perlbrew
+title: Fun with Perlbrew
 kind: article
 created_at: 2010-08-06
 location: New York, NY
-h1: Two small helpers for Perlbrew
+h1: Two Small Helpers for Perlbrew
+categories:
+- perl
+- perlbrew
+- bash
+- bash-completion
 ---
 
 ## Now here's something we hope you'll really like...
