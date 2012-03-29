@@ -69,7 +69,7 @@ h2, h3, h4, h5, h6 { margin-top: 20px; }
 .h_banner { border-bottom: none; }
 
 #home, .up, .footer ul {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "DejaVuSansBook", "Lucida Grande", "Helvetica Neue", sans-serif;
 }
 
@@ -147,14 +147,15 @@ a:hover, a:focus {
   margin-top: -10px;
 }
 
+.nav {
+  float: left;
+  margin-top: 10px;
+}
+
 .footer {
   margin-top: 20px;
   border-top: solid 4px;
   color: #111;
-}
-
-.footer ul {
-  margin-top: 10px;
 }
 
 pre {
@@ -176,9 +177,68 @@ ins {
 }
 
 ins:before {
-  content: "〈"
+  content: "〈";
 }
 
 ins:after {
-  content: "〉"
+  content: "〉";
+}
+
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
+
+.me {
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.me li {
+  float: right;
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.rss, .github, .twitter {
+  background: url('../images/sprites.png');
+  display: block;
+  height: 32px;
+  width: 29px;
+  text-indent: -9999px;
+}
+
+.github {
+  background-position: -84px 0;
+}
+
+.rss {
+  background-position: -248px 0;
+}
+
+.twitter {
+  background-position: -412px 0;
+}
+
+.github:hover, .github:focus {
+  background-position: -2px 0;
+}
+
+.rss:hover, .rss:focus {
+  background-position: -166px 0;
+}
+
+.twitter:hover, .twitter:focus {
+  background-position: -330px 0;
+}
+
+.cloud {
+  word-spacing: 20px;
+  line-height: 2;
 }
