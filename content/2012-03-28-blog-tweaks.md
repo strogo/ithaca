@@ -8,8 +8,11 @@ categories:
 - blog
 - icons
 - nanoc
+- categories
 - sprites
 - css
+- markdown
+- redcarpet
 - typography
 - smartypants
 ---
