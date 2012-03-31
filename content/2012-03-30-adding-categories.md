@@ -145,9 +145,9 @@ project. The following lives at `lib/categories.rb`:
       end
       memoize :articles_by_category
 
-      def link_categories(cats, url_offset='../../../categories/')
+      def link_categories(cats)
         cats.map do |cat|
-          ['<a href="', url_offset, cat, '.html">', cat, '</a>'].join
+          ['<a href="/categories/', cat, '.html">', cat, '</a>'].join
         end
       end
 
