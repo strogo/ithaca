@@ -9,23 +9,23 @@ h1: All the posts I saw fit to print
 
 <ul class="arch">
   <% sorted_articles.each do |article| %>
-	<li>
+    <li>
       <span><%= article.attributes[:created_at] %> &middot; </span>
-      <a href="<%= url_for(article) %>"><%= article.attributes[:title] %></a>
-	</li>
+      <a href="<%= relative_path_to(article) %>"><%= article.attributes[:title] %></a>
+    </li>
   <% end %>
 </ul>
 
 <div class="footer group">
   <ul class="nav">
     <li><a href="/">Home</a></li>
-    <li>| <a href="about.html">About</a></li>
+    <li>| <a href="/about.html">About</a></li>
     <li class="here">| Archive</li>
-    <li>| <a href="categories.html">Categories</a></li>
+    <li>| <a href="/categories.html">Categories</a></li>
   </ul>
   <ul class="me">
     <li>
-      <a href="atom.xml" class="rss">Subscribe</a>
+      <a href="/atom.xml" class="rss">Subscribe</a>
     </li>
     <li>
       <a href="https://github.com/telemachus" class="github">Me @ Github</a>

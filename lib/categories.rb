@@ -67,13 +67,11 @@ module Categories
   #
   # :call-seq:
   #   link_categories(cats) -> array
-  #   link_categories(cats, url_offset) -> array
   #
-  # By default, the links are relative to posts. So if no offset is
-  # given, the method adds the appropriate relative path to the link.
-  def link_categories(cats, url_offset='../../../categories/')
+  # This is ugly, but better here then in the middle of a layout.
+  def link_categories(cats)
     cats.map do |cat|
-      ['<a href="', url_offset, cat, '.html">', cat, '</a>'].join
+      ['<a href="/categories/', cat, '.html">', cat, '</a>'].join
     end
   end
 
