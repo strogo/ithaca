@@ -18,9 +18,10 @@ like the following:
 
      ps a | grep cmd | grep -v grep
 
-If that's not clear to you already, the second `grep` says don't show
-(`-v`) *the grep command itself* in its responses. It helps to trim results
-that would otherwise look like this:
+If that's not clear to you already, the `-v` option in the second call to
+`grep` inverts the matching. So the last bit of the pipeline selects items
+that *don't* match the string 'grep'. By adding that second `grep`, we can
+trim results that would otherwise look like this:
 
     telemachus ~$ ps a | grep irssi
      2118 s000  R+     0:00.00 grep irssi # We don't want to see this.
